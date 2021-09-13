@@ -1,11 +1,7 @@
-sap.ui.define([
-	"sap/ui/base/Object",
-	"sap/m/MessageBox"
-], function (UI5Object, MessageBox) {
+sap.ui.define(["sap/ui/base/Object", "sap/m/MessageBox"], function (UI5Object, MessageBox) {
 	"use strict";
 
 	return UI5Object.extend("pub.pubsample.controller.ErrorHandler", {
-
 		/**
 		 * Handles application errors by automatically attaching to the model events and displaying errors when needed.
 		 * @class
@@ -13,12 +9,11 @@ sap.ui.define([
 		 * @public
 		 * @alias pub.pubsample.controller.ErrorHandler
 		 */
-		constructor : function (oComponent) {
-			this._oResourceBundle = oComponent.getModel("i18n").getResourceBundle();
+		constructor: function (oComponent) {
 			this._oComponent = oComponent;
 			this._oModel = oComponent.getModel();
 			this._bMessageOpen = false;
-			this._sErrorText = this._oResourceBundle.getText("errorText");
+			this._sErrorText = "Error";
 
 			this._oModel.attachMetadataFailed(function (oEvent) {
 				var oParams = oEvent.getParameters();
@@ -42,23 +37,20 @@ sap.ui.define([
 		 * @param {string} sDetails a technical error to be displayed on request
 		 * @private
 		 */
-		_showServiceError : function (sDetails) {
+		_showServiceError: function (sDetails) {
 			if (this._bMessageOpen) {
 				return;
 			}
 			this._bMessageOpen = true;
-			MessageBox.error(
-				this._sErrorText,
-				{
-					id : "serviceErrorMessageBox",
-					details: sDetails,
-					styleClass: this._oComponent.getContentDensityClass(),
-					actions: [MessageBox.Action.CLOSE],
-					onClose: function () {
-						this._bMessageOpen = false;
-					}.bind(this)
-				}
-			);
-		}
+			MessageBox.error(this._sErrorText, {
+				id: "serviceErrorMessageBox",
+				details: sDetails,
+				styleClass: this._oComponent.getContentDensityClass(),
+				actions: [MessageBox.Action.CLOSE],
+				onClose: function () {
+					this._bMessageOpen = false;
+				}.bind(this),
+			});
+		},
 	});
 });

@@ -4,7 +4,6 @@
 	"sap.app": {
 		"id": "pub.pubsample",
 		"type": "application",
-		"i18n": "i18n/i18n.properties",
 		"title": "{{appTitle}}",
 		"description": "{{appDescription}}",
 		"applicationVersion": {
@@ -70,12 +69,6 @@
 		},
 
 		"models": {
-			"i18n": {
-				"type": "sap.ui.model.resource.ResourceModel",
-				"settings": {
-					"bundleName": "pub.pubsample.i18n.i18n"
-				}
-			},
 			"": {
 				"dataSource": "mainService",
 				"preload": true
@@ -121,13 +114,13 @@
 					"viewName": "Worklist",
 					"viewId": "worklist",
 					"viewLevel": 1,
-					"title": "{i18n>worklistViewTitle}"
+					"title": "Components"
 				},
 				"object": {
 					"viewName": "Object",
 					"viewId": "object",
 					"viewLevel": 2,
-					"title": "{i18n>objectViewTitle}"
+					"title": "Components"
 				},
 				"objectNotFound": {
 					"viewName": "ObjectNotFound",

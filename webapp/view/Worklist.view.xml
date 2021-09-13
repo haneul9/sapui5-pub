@@ -180,9 +180,10 @@
 									<HBox>
 										<items>
 											<ComboBox items="{
-										path: '/ProductCollection',
-										sorter: { path: 'text' }
-									}">
+												path: '/ProductCollection',
+												sorter: { path: 'text' },
+												templateShareable: true
+											}">
 												<core:Item
 													key="{ProductId}"
 													text="{Name}"
@@ -192,9 +193,10 @@
 												forceSelection="false"
 												selectedKey="{/SelectedProduct}"
 												items="{
-											path: '/ProductCollection',
-											sorter: { path: 'Name' }
-										}"
+													path: '/ProductCollection',
+													sorter: { path: 'Name' },
+													templateShareable:true
+												}"
 											>
 												<core:Item
 													key="{ProductId}"
@@ -206,9 +208,10 @@
 												selectionFinish="handleSelectionFinish"
 												width="350px"
 												items="{
-											path: '/ProductCollection',
-											sorter: { path: 'Name' }
-										}"
+													path: '/ProductCollection',
+													sorter: { path: 'Name' },
+													templateShareable:true
+												}"
 											>
 												<core:Item
 													key="{ProductId}"
@@ -550,6 +553,10 @@
 												showCloseButton="true"
 												class="sapUiMediumMarginBottom"
 											/>
+										</items>
+									</HBox>
+									<HBox>
+										<items>
 											<MessageStrip
 												text="Success with default icon and close button:"
 												type="Success"
@@ -563,6 +570,10 @@
 												showIcon="true"
 												class="sapUiMediumMarginBottom"
 											/>
+										</items>
+									</HBox>
+									<HBox>
+										<items>
 											<MessageStrip
 												text="Information with custom icon"
 												type="Information"
@@ -618,6 +629,10 @@
 												state="Error"
 												width="200px"
 											/>
+										</items>
+									</HBox>
+									<HBox>
+										<items>
 											<ProgressIndicator
 												class="sapUiSmallMarginBottom"
 												percentValue="99"
@@ -705,9 +720,8 @@
 													<ObjectStatus
 														text="{Status}"
 														state="{
-																	path: 'Available',
-																	formatter: '.formatAvailableToObjectState'
-																}"
+															path: 'Available'
+														}"
 													/>
 												</table:template>
 											</table:Column>
@@ -725,7 +739,10 @@
 												<table:template>
 													<ComboBox
 														value="{SupplierName}"
-														items="{/Suppliers}"
+														items="{
+															path: '/Suppliers',
+															templateShareable:true
+														}"
 													>
 														<core:Item text="{Name}"/>
 													</ComboBox>
@@ -751,9 +768,9 @@
 												<Label text="Heavy Weight"/>
 												<table:template>
 													<CheckBox selected="{
-								path: 'Heavy',
-								type: 'sap.ui.model.type.String'
-							}"/>
+														path: 'Heavy',
+														type: 'sap.ui.model.type.String'
+													}"/>
 												</table:template>
 											</table:Column>
 											<table:Column width="12rem">
@@ -761,7 +778,10 @@
 												<table:template>
 													<Select
 														selectedKey="{Category}"
-														items="{/Categories}"
+														items="{
+															path: '/Categories',
+															templateShareable:true
+														}"
 													>
 														<core:Item
 															text="{Name}"
@@ -773,28 +793,18 @@
 											<table:Column width="12rem">
 												<Label text="Additional Categories"/>
 												<table:template>
-													<MultiInput
-														value="{AdditionalCategory}"
-														tokens="{AdditionalCategoriesSelection}"
-														suggestionItems="{
-																	path: '/Categories',
-																	sorter: { path: 'Name' }
-																}"
-														showValueHelp="false"
+													<Select
+														selectedKey="{Category}"
+														items="{
+															path: '/Categories',
+															templateShareable:true
+														}"
 													>
-														<tokens>
-															<Token
-																key="{Key}"
-																text="{Name}"
-															/>
-														</tokens>
-														<suggestionItems>
-															<core:Item
-																key="{ProductId}"
-																text="{Name}"
-															/>
-														</suggestionItems>
-													</MultiInput>
+														<core:Item
+															text="{Name}"
+															key="{Name}"
+														/>
+													</Select>
 												</table:template>
 											</table:Column>
 											<table:Column
@@ -804,9 +814,8 @@
 												<Label text="Status"/>
 												<table:template>
 													<core:Icon src="{
-																path: 'Available',
-																formatter: '.formatAvailableToIcon'
-															}"/>
+														path: 'Available'
+													}"/>
 												</table:template>
 											</table:Column>
 											<table:Column
@@ -816,10 +825,10 @@
 												<Label text="Delivery Date"/>
 												<table:template>
 													<DatePicker value="{
-																path: 'DeliveryDate',
-																type: 'sap.ui.model.type.Date',
-																formatOptions: {source: {pattern: 'timestamp'}}
-															}"/>
+														path: 'DeliveryDate',
+														type: 'sap.ui.model.type.Date',
+														formatOptions: {source: {pattern: 'timestamp'}}
+													}"/>
 												</table:template>
 											</table:Column>
 										</table:columns>
