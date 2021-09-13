@@ -4,8 +4,8 @@
 	"sap.app": {
 		"id": "pub.pubsample",
 		"type": "application",
-		"title": "{{appTitle}}",
-		"description": "{{appDescription}}",
+		"title": "pubsample",
+		"description": "pubsample",
 		"applicationVersion": {
 			"version": "1.0.0"
 		},
