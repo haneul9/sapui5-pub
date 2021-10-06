@@ -5,6 +5,7 @@
 	xmlns:core="sap.ui.core"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:u="sap.ui.unified"
+	xmlns:pub="sap.ui.pub.control"
 >
 	<Page
 		backgroundDesign="Standard"
@@ -78,13 +79,13 @@
 												placeholder="이름을 입력하세요."
 												valueStateText="Name must not be empty. Maximum 10 characters."
 												value="{
-											path : '/name',
-											type : 'sap.ui.model.type.String',
-											constraints : {
-												minLength: 1,
-												maxLength: 10
-											}
-										}"
+													path: '/name',
+													type: 'sap.ui.model.type.String',
+													constraints: {
+														minLength: 1,
+														maxLength: 10
+													}
+												}"
 											/>
 											<Input
 												id="productInput"
@@ -181,7 +182,9 @@
 										<items>
 											<ComboBox items="{
 												path: '/ProductCollection',
-												sorter: { path: 'text' },
+												sorter: {
+													path: 'text'
+												},
 												templateShareable: true
 											}">
 												<core:Item
@@ -194,8 +197,10 @@
 												selectedKey="{/SelectedProduct}"
 												items="{
 													path: '/ProductCollection',
-													sorter: { path: 'Name' },
-													templateShareable:true
+													sorter: {
+														path: 'Name'
+													},
+													templateShareable: true
 												}"
 											>
 												<core:Item
@@ -209,8 +214,10 @@
 												width="350px"
 												items="{
 													path: '/ProductCollection',
-													sorter: { path: 'Name' },
-													templateShareable:true
+													sorter: {
+														path: 'Name'
+													},
+													templateShareable: true
 												}"
 											>
 												<core:Item
@@ -243,9 +250,10 @@
 												columns="6"
 												class="sapUiMediumMarginBottom"
 											>
-												<RadioButton
+												<pub:RadioButton
 													id="RB1-1"
 													text="Long Option Number 1"
+													innerSize="30%"
 												/>
 												<RadioButton
 													id="RB1-2"
@@ -741,7 +749,7 @@
 														value="{SupplierName}"
 														items="{
 															path: '/Suppliers',
-															templateShareable:true
+															templateShareable: true
 														}"
 													>
 														<core:Item text="{Name}"/>
@@ -780,7 +788,7 @@
 														selectedKey="{Category}"
 														items="{
 															path: '/Categories',
-															templateShareable:true
+															templateShareable: true
 														}"
 													>
 														<core:Item
@@ -797,7 +805,7 @@
 														selectedKey="{Category}"
 														items="{
 															path: '/Categories',
-															templateShareable:true
+															templateShareable: true
 														}"
 													>
 														<core:Item
@@ -827,7 +835,11 @@
 													<DatePicker value="{
 														path: 'DeliveryDate',
 														type: 'sap.ui.model.type.Date',
-														formatOptions: {source: {pattern: 'timestamp'}}
+														formatOptions: {
+															source: {
+																pattern: 'timestamp'
+															}
+														}
 													}"/>
 												</table:template>
 											</table:Column>
