@@ -8,6 +8,10 @@ sap.ui.define(
 		return RadioButton.extend("sap.ui.pub.control.RadioButton", {
 			metadata: {
 				properties: {
+					outerSize: {
+						type: "sap.ui.core.CSSSize",
+						defaultValue: "50%",
+					},
 					innerSize: {
 						type: "sap.ui.core.CSSSize",
 						defaultValue: "22%",
@@ -22,6 +26,7 @@ sap.ui.define(
 				const sId = this.getId();
 				const oControl = document.getElementById(sId);
 
+				oControl.childNodes[0].childNodes[0].childNodes[0].setAttribute("r", this.getOuterSize());
 				oControl.childNodes[0].childNodes[0].childNodes[1].setAttribute("r", this.getInnerSize());
 			},
 			renderer: {},

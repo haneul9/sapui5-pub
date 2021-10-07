@@ -253,6 +253,7 @@
 												<pub:RadioButton
 													id="RB1-1"
 													text="Long Option Number 1"
+													outerSize="80%"
 													innerSize="30%"
 												/>
 												<RadioButton
