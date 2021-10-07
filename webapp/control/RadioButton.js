@@ -24,10 +24,10 @@ sap.ui.define(
 				}
 
 				const sId = this.getId();
-				const oControl = document.getElementById(sId);
+				const aCircleNodes = document.getElementById(sId).childNodes[0].childNodes[0].childNodes;
 
-				oControl.childNodes[0].childNodes[0].childNodes[0].setAttribute("r", this.getOuterSize());
-				oControl.childNodes[0].childNodes[0].childNodes[1].setAttribute("r", this.getInnerSize());
+				aCircleNodes[0].setAttribute("r", this.getOuterSize());
+				aCircleNodes[1].setAttribute("r", this.getInnerSize());
 			},
 			renderer: {},
 		});
