@@ -94,6 +94,7 @@
 												showValueHelp="true"
 												valueHelpRequest=".onValueHelpRequest"
 												suggestionItems="{/ProductCollection}"
+												class="test0"
 											>
 												<suggestionItems>
 													<core:Item text="{Name}"/>
@@ -253,8 +254,8 @@
 												<pub:RadioButton
 													id="RB1-1"
 													text="Long Option Number 1"
-													outerSize="80%"
-													innerSize="30%"
+													outerSize="50%"
+													innerSize="35%"
 												/>
 												<RadioButton
 													id="RB1-2"
@@ -374,18 +375,23 @@
 											<DatePicker
 												id="DP1"
 												placeholder="Enter Date"
-												class="sapUiSmallMarginBottom"
+												class="sapUiSmallMarginBottom test1"
 											/>
-											<DateRangeSelection id="DRS2"/>
+											<DateRangeSelection
+												id="DRS2"
+												class="test2"
+											/>
 											<TimePicker
 												id="TP1"
 												width="100%"
 												placeholder="Enter Time"
+												class="test3"
 											/>
 											<DateTimePicker
 												id="DTP1"
 												width="100%"
 												placeholder="Enter Date &amp; Time"
+												class="test4"
 											/>
 										</items>
 									</HBox>
