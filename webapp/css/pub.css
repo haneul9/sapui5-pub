@@ -174,6 +174,60 @@ div.sapUiTableSelectAllCheckBox::after, div.sapUiTableRowSelectionCell::after{bo
 .sapMFocus .sapMInputBaseIcon:active{color:#fff;background:var(--BackgroundColorFocus) !important;}
 .sapMInputBaseIconPressed .sapMInputBaseIcon{color:#fff;background:var(--BackgroundColorFocus) !important;}
 
+div.sapUiCalItem{color:#000;background:none;}/* 달력 기본 */
+div.sapUiCalItem>.sapUiCalItemText{box-shadow:none !important;}
+div.sapUiCalItem>.sapUiCalItemText:hover{color:#000 !important;background:#cae6f7 !important;}
+div.sapUiCalItemWeekEnd{color:#5f9dde;background:none;}
+div.sapUiCalFirstWDay{color:#ee6b67;background:none;}
+
+div.sapUiCalItemNow{color:#fff !important;font-weight:700;background:#217fed !important;}/* 달력 오늘 */
+div.sapUiCalItemNow>.sapUiCalItemText:hover{color:#000 !important;background:#cae6f7 !important;}
+div.sapUiCalItemNow>.sapUiCalItemText{line-height: 1.875rem !important;border:none;outline-style:none !important;box-shadow:none !important;}
+div.sapUiCalItemNow>.sapUiCalItemText:active{outline-style:none !important;}
+div.sapUiCalItemNow>.sapUiCalItemText:focus{outline-style:none !important;}
+div.sapUiCalItemNow>.sapUiCalItemText:after{display:none !important;}
+
+div.sapUiCalItemSelBetween{color:#fff !important;font-weight:700;background:#fb635e !important;}/* 달력 다중 선택 */
+div.sapUiCalItemSelBetween>.sapUiCalItemText:hover{color:#000 !important;background:#cae6f7 !important;}
+div.sapUiCalItemSelBetween>.sapUiCalItemText{border:none;outline-style:none !important;}
+div.sapUiCalItemSelBetween>.sapUiCalItemText:active{outline-style:none !important;}
+div.sapUiCalItemSelBetween>.sapUiCalItemText:focus{outline-style:none !important;}
+div.sapUiCalItemSelBetween>.sapUiCalItemText:after{display:none !important;}
+
+div.sapUiCalItemSel{color:#fff !important;font-weight:700;background:#fb635e !important;}/* 달력 선택 */
+div.sapUiCalItemSel>.sapUiCalItemText:hover{color:#000 !important;background:#cae6f7 !important;}
+div.sapUiCalItemSel>.sapUiCalItemText{border:none;outline-style:none !important;}
+div.sapUiCalItemSel>.sapUiCalItemText:active{outline-style:none !important;}
+div.sapUiCalItemSel>.sapUiCalItemText:focus{outline-style:none !important;}
+div.sapUiCalItemSel>.sapUiCalItemText:after{display:none !important;}
+
+.sapUiCalYearPicker div.sapUiCalItem{color:#000;outline-style:none !important;}/* 달력 년도 선택 */
+.sapUiCalYearPicker div.sapUiCalItem:hover{color:#000 !important;background:#cae6f7 !important;}
+.sapUiCalYearPicker div.sapUiCalItem:active{color:#fff !important;background:#217fed !important;}
+.sapUiCalYearPicker div.sapUiCalItem:focus{color:#fff !important;background:#217fed !important;}
+.sapUiCalYearPicker div.sapUiCalItem.sapUiCalItemSel:focus{color:#fff !important;background:#fb635e !important;}
+
+.sapUiCalMonthPicker div.sapUiCalItem{color:#000;outline-style:none !important;}/* 달력 월 선택 */
+.sapUiCalMonthPicker div.sapUiCalItem:hover{color:#000 !important;background:#cae6f7 !important;}
+.sapUiCalMonthPicker div.sapUiCalItem:active{color:#fff !important;background:#217fed !important;}
+.sapUiCalMonthPicker div.sapUiCalItem:focus{color:#fff !important;background:#217fed !important;}
+.sapUiCalMonthPicker div.sapUiCalItem.sapUiCalItemSel:focus{color:#fff !important;background:#fb635e !important;}
+
+.sapMTimePickerContainer .sapMTPColumn .sapMTimePickerSlider .sapMTimePickerItem{color:#000;outline-style:none !important;}/* 달력 시간 선택 */
+.sapMTimePickerContainer .sapMTPColumn .sapMTimePickerSlider .sapMTimePickerItem:hover{color:#000 !important;background:#cae6f7 !important;}
+.sapMTimePickerContainer .sapMTPColumn .sapMTimePickerSlider .sapMTimePickerItem:active{color:#fff !important;background:#fb635e !important;}
+.sapMTimePickerContainer .sapMTPColumn .sapMTimePickerSlider .sapMTimePickerItem:focus{color:#fff !important;background:#fb635e !important;}
+.sapMTimePickerContainer .sapMTPColumn .sapMTimePickerSlider .sapMTimePickerItemSelected{color:#fff !important;background:#217fed !important;}
+
+.sapMDialog>footer{height:3.5rem;}
+html.sap-desktop .sapContrast.sapMIBar.sapMFooter-CTX{height:3.5rem;padding-right:1.2rem;color:#fff;border-top:1px solid #ccc !important;background:#fff;}
+html.sap-desktop .sapContrast.sapMIBar.sapMFooter-CTX .sapMBtnText{height:1.9rem !important;padding:0 0.9rem !important;color:#fff !important;border:none !important;text-shadow:none !important;background:#304456 !important;}
+html.sap-desktop .sapContrast.sapMIBar.sapMFooter-CTX .sapMBtnText .sapMBtnContent{line-height:1.9rem !important;}
+html.sap-desktop .sapContrast.sapMIBar.sapMFooter-CTX .sapMBtnText:hover{color:#fff !important;background:#535c64 !important;}
+html.sap-desktop .sapContrast.sapMIBar.sapMFooter-CTX .sapMBtnText:active{color:#fff !important;background:#192734 !important;}
+html.sap-desktop .sapContrast.sapMIBar.sapMFooter-CTX .sapMBtnDisabled{opacity:0.7 !important;}
+html.sap-desktop .sapContrast.sapMIBar.sapMFooter-CTX .sapMBtnActive bdi{color:#fff !important;}
+
 /* Switch */
 html.sap-desktop .sapMSwtCont:focus>.sapMSwt{outline-style:none !important;}
 .sapUiSizeCompact .sapMSwtHandle{width:1.3rem;height:1.3rem;left:2.1rem;border-color:#fff;background:#fff;}
@@ -251,12 +305,6 @@ html.sap-desktop .sapMSwtCont:focus>.sapMSwt{outline-style:none !important;}
 
 /* Icon 변경 */
 .sapUiIcon::before{display:inline-block;width:100%;height:100%;clear:both;vertical-align:top;background-repeat:no-repeat;background-position:center center;}/* 아이콘 공통 before */
-#container-pubsample---worklist--productInput .sapUiIcon::before{content:'검색';font-size:0;background-size:auto 70%;background-image:url(./images/icon_search.png);}
-#container-pubsample---worklist--DP1 .sapUiIcon::before{content:'달력';font-size:0;background-size:auto 70%;background-image:url(./images/icon_date.png);}
-#container-pubsample---worklist--DRS2 .sapUiIcon::before{content:'달력';font-size:0;background-size:auto 70%;background-image:url(./images/icon_date.png);}
-#container-pubsample---worklist--TP1 .sapUiIcon::before{content:'시간';font-size:0;background-size:auto 70%;background-image:url(./images/icon_time.png);}
-#container-pubsample---worklist--DTP1 .sapUiIcon::before{content:'달력, 시간';font-size:0;background-size:auto 70%;background-image:url(./images/icon_datetime.png);}
-
 .sapIcon_Search .sapUiIcon::before{content:'검색';font-size:0;background-size:auto 70%;background-image:url(./images/icon_search.png);}
 .sapIcon_Date .sapUiIcon::before{content:'달력';font-size:0;background-size:auto 70%;background-image:url(./images/icon_date.png);}
 .sapIcon_Time .sapUiIcon::before{content:'시간';font-size:0;background-size:auto 70%;background-image:url(./images/icon_time.png);}
