@@ -36,7 +36,7 @@ html.sap-desktop:not(.sapUiNativeScrollbars) ::-webkit-scrollbar-thumb{border-ra
 .sapMInput input{font-family:Pretendard;font-size:0.813rem;line-height:0.813rem;font-weight:500;color:var(--FontColorNormal);}
 .sapMTextArea textarea{font-family:Pretendard;font-size:0.813rem;line-height:0.813rem;font-weight:500;color:var(--FontColorNormal);}
 .sapMRbBLabel{font-family:Pretendard;font-size:0.813rem;line-height:0.813rem;font-weight:500;color:var(--FontColorNormal);}
-.sapMCb label{font-family:Pretendard;font-size:0.813rem;line-height:0.813rem;font-weight:500;color:var(--FontColorNormal);}
+.sapMCb label{font-family:Pretendard;font-size:0.813rem;line-height:1.713rem;font-weight:500;color:var(--FontColorNormal);}
 
 /* 공통 Focus outline */
 .sapMSlt{outline-style:none !important;}
