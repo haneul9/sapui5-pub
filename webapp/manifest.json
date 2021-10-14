@@ -77,9 +77,8 @@
 
 		"resources": {
 			"css": [
-			  {
-				"uri": "css/pub.css"
-			  }
+				{ "uri": "css/webfonts/pretendard-subset.css" },
+				{ "uri": "css/pub.css" }
 			]
 		  },
 
