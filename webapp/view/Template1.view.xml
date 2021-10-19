@@ -43,7 +43,7 @@
 						<items>
 							<VBox width="25%">
 								<items>
-									<HBox>
+									<HBox justifyContent="SpaceBetween">
 										<items>
 											<Title
 												level="H2"
@@ -93,7 +93,7 @@
 							</VBox>
 							<VBox width="45%">
 								<items>
-									<HBox>
+									<HBox justifyContent="SpaceBetween">
 										<items>
 											<Title
 												level="H2"
@@ -150,7 +150,7 @@
 							</VBox>
 							<VBox width="25%">
 								<items>
-									<HBox>
+									<HBox justifyContent="SpaceBetween">
 										<items>
 											<Title
 												level="H2"
