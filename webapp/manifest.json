@@ -102,6 +102,11 @@
 					"target": ["worklist"]
 				},
 				{
+					"pattern": "template1",
+					"name": "template1",
+					"target": ["template1"]
+				},
+				{
 					"pattern": "Products/{objectId}",
 					"name": "object",
 					"target": ["object"]
@@ -114,6 +119,12 @@
 					"viewId": "worklist",
 					"viewLevel": 1,
 					"title": "Components"
+				},
+				"template1": {
+					"viewName": "Template1",
+					"viewId": "template1",
+					"viewLevel": 1,
+					"title": "Template 1"
 				},
 				"object": {
 					"viewName": "Object",

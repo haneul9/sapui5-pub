@@ -1,0 +1,370 @@
+<mvc:View
+	controllerName="pub.pubsample.controller.Worklist"
+	xmlns="sap.m"
+	xmlns:table="sap.ui.table"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:u="sap.ui.unified"
+>
+	<Page
+		backgroundDesign="Standard"
+		contentOnlyBusy="false"
+		enableScrolling="true"
+		floatingFooter="false"
+		navButtonTooltip=""
+		showFooter="true"
+		showHeader="true"
+		showNavButton="false"
+		showSubHeader="true"
+		title="Components"
+		titleLevel="Auto"
+	>
+		<content>
+			<VBox width="auto">
+				<items>
+					<HBox
+						class="sapUiResponsiveMargin"
+						width="auto"
+						justifyContent="SpaceBetween"
+					>
+						<items>
+							<Title
+								level="H1"
+								text="경조금"
+							/>
+							<Button text="신청"/>
+						</items>
+					</HBox>
+					<HBox
+						class="sapUiResponsiveMargin"
+						width="auto"
+						justifyContent="SpaceAround"
+					>
+						<items>
+							<VBox width="25%">
+								<items>
+									<HBox>
+										<items>
+											<Title
+												level="H2"
+												text="대상자 정보"
+											/>
+											<core:Icon src="sap-icon://action"/>
+										</items>
+									</HBox>
+									<HBox>
+										<items>
+											<Image
+												src="https://i1.wp.com/jejuhydrofarms.com/wp-content/uploads/2020/05/blank-profile-picture-973460_1280.png?ssl=1"
+												height="34px"
+												width="34px"
+											/>
+											<VBox>
+												<items>
+													<Text
+														text="홍길동 팀장"
+														textAlign="Begin"
+														textDirection="Inherit"
+														width=""
+														wrapping="true"
+														wrappingType="Normal"
+													/>
+													<Text
+														text="예스코홀딩스 인사기획팀"
+														textAlign="Begin"
+														textDirection="Inherit"
+														width=""
+														wrapping="true"
+														wrappingType="Normal"
+													/>
+													<Text
+														text="경영관리직 / 12345"
+														textAlign="Begin"
+														textDirection="Inherit"
+														width=""
+														wrapping="true"
+														wrappingType="Normal"
+													/>
+												</items>
+											</VBox>
+										</items>
+									</HBox>
+								</items>
+							</VBox>
+							<VBox width="45%">
+								<items>
+									<HBox>
+										<items>
+											<Title
+												level="H2"
+												text="내가 지원받은 경조금은"
+											/>
+											<core:Icon src="sap-icon://action"/>
+										</items>
+									</HBox>
+									<HBox>
+										<items>
+											<Text
+												text="2021.12.01"
+												textAlign="Begin"
+											/>
+											<Text
+												text="부친 회갑 예정"
+												textAlign="Begin"
+											/>
+											<Text
+												text="신청하기"
+												textAlign="Begin"
+											/>
+										</items>
+									</HBox>
+									<HBox>
+										<items>
+											<VBox>
+												<items>
+													<Text
+														text="건수"
+														textAlign="Begin"
+													/>
+													<Text
+														text="5"
+														textAlign="Begin"
+													/>
+												</items>
+											</VBox>
+											<VBox>
+												<items>
+													<Text
+														text="금액"
+														textAlign="Begin"
+													/>
+													<Text
+														text="5,000,000"
+														textAlign="Begin"
+													/>
+												</items>
+											</VBox>
+										</items>
+									</HBox>
+								</items>
+							</VBox>
+							<VBox width="25%">
+								<items>
+									<HBox>
+										<items>
+											<Title
+												level="H2"
+												text="조회 조건"
+											/>
+											<core:Icon src="sap-icon://action"/>
+										</items>
+									</HBox>
+									<HBox>
+										<items>
+											<Label
+												text="신청일"
+												labelFor="startDt"
+											/>
+											<DatePicker
+												id="startDt"
+												width="150px"
+												placeholder="Enter Date"
+												class="sapUiSmallMarginBottom sapIcon_Date"
+											/>
+											<Text text="~"/>
+											<DatePicker
+												id="endDt"
+												width="150px"
+												placeholder="Enter Date"
+												class="sapUiSmallMarginBottom sapIcon_Date"
+											/>
+										</items>
+									</HBox>
+									<HBox>
+										<items>
+											<Label
+												text="경조유형"
+												labelFor="firstCondition"
+											/>
+											<ComboBox
+												id="firstCondition"
+												items="{
+													path: '/ProductCollection',
+													sorter: {
+														path: 'text'
+													},
+													templateShareable: true
+												}"
+											>
+												<core:Item
+													key="{ProductId}"
+													text="{Name}"
+												/>
+											</ComboBox>
+										</items>
+									</HBox>
+									<HBox>
+										<items>
+											<Label
+												text="진행상태"
+												labelFor="secondCondition"
+											/>
+											<ComboBox
+												id="secondCondition"
+												items="{
+													path: '/ProductCollection',
+													sorter: {
+														path: 'text'
+													},
+													templateShareable: true
+												}"
+											>
+												<core:Item
+													key="{ProductId}"
+													text="{Name}"
+												/>
+											</ComboBox>
+										</items>
+									</HBox>
+								</items>
+							</VBox>
+						</items>
+					</HBox>
+					<HBox
+						class="sapUiResponsiveMargin"
+						width="auto"
+					>
+						<items>
+							<VBox width="auto">
+								<items>
+									<HBox
+										width="auto"
+										justifyContent="SpaceBetween"
+									>
+										<items>
+											<Title
+												level="H3"
+												text="신청내역"
+											/>
+											<Button text="Excel"/>
+										</items>
+									</HBox>
+									<table:Table
+										width="100%"
+										rows="{/ProductCollection}"
+										selectionMode="None"
+										visibleRowCount="10"
+										ariaLabelledBy="title"
+									>
+										<table:columns>
+											<table:Column width="10%">
+												<Label text="No"/>
+												<table:template>
+													<Text
+														text="{Name}"
+														wrapping="false"
+													/>
+												</table:template>
+											</table:Column>
+											<table:Column width="10%">
+												<Label text="상태"/>
+												<table:template>
+													<Input value="{ProductId}"/>
+												</table:template>
+											</table:Column>
+											<table:Column
+												width="10%"
+												hAlign="End"
+											>
+												<Label text="성명"/>
+												<table:template>
+													<Label text="{Quantity}"/>
+												</table:template>
+											</table:Column>
+											<table:Column width="10%">
+												<Label text="직급"/>
+												<table:template>
+													<ObjectStatus
+														text="{Status}"
+														state="{
+															path: 'Available'
+														}"
+													/>
+												</table:template>
+											</table:Column>
+											<table:Column width="10%">
+												<Label text="소속부서"/>
+												<table:template>
+													<u:Currency
+														value="{Price}"
+														currency="{CurrencyCode}"
+													/>
+												</table:template>
+											</table:Column>
+											<table:Column width="10%">
+												<Label text="경조구분"/>
+												<table:template>
+													<ComboBox
+														value="{SupplierName}"
+														items="{
+															path: '/Suppliers',
+															templateShareable: true
+														}"
+													>
+														<core:Item text="{Name}"/>
+													</ComboBox>
+												</table:template>
+											</table:Column>
+											<table:Column width="10%">
+												<Label text="관계"/>
+												<table:template>
+													<Link
+														text="Show Image"
+														href="{ProductPicUrl}"
+														target="_blank"
+													/>
+												</table:template>
+											</table:Column>
+											<table:Column width="10%">
+												<Label text="경조일"/>
+												<table:template>
+													<Button text="Show Details"/>
+												</table:template>
+											</table:Column>
+											<table:Column width="10%">
+												<Label text="지급금액"/>
+												<table:template>
+													<CheckBox selected="{
+														path: 'Heavy',
+														type: 'sap.ui.model.type.String'
+													}"/>
+												</table:template>
+											</table:Column>
+											<table:Column width="10%">
+												<Label text="증빙"/>
+												<table:template>
+													<Select
+														selectedKey="{Category}"
+														items="{
+															path: '/Categories',
+															templateShareable: true
+														}"
+													>
+														<core:Item
+															text="{Name}"
+															key="{Name}"
+														/>
+													</Select>
+												</table:template>
+											</table:Column>
+										</table:columns>
+									</table:Table>
+								</items>
+							</VBox>
+						</items>
+					</HBox>
+				</items>
+			</VBox>
+		</content>
+	</Page>
+</mvc:View>
