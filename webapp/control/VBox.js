@@ -16,9 +16,6 @@ sap.ui.define(
 					},
 				},
 			},
-			// setRenderType(fValue) {
-			// 	this.setProperty("renderType", fValue, true);
-			// },
 			renderer: {},
 		});
 	}
