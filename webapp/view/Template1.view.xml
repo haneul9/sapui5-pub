@@ -163,20 +163,11 @@
 										<items>
 											<Label
 												text="신청일"
-												labelFor="startDt"
+												labelFor="applyDt"
 											/>
-											<DatePicker
-												id="startDt"
-												width="150px"
-												placeholder="Enter Date"
-												class="sapUiSmallMarginBottom sapIcon_Date"
-											/>
-											<Text text="~"/>
-											<DatePicker
-												id="endDt"
-												width="150px"
-												placeholder="Enter Date"
-												class="sapUiSmallMarginBottom sapIcon_Date"
+											<DateRangeSelection
+												id="applyDt"
+												class="sapIcon_Date"
 											/>
 										</items>
 									</HBox>
