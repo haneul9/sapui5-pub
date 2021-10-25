@@ -1,0 +1,288 @@
+<mvc:View
+	controllerName="pub.pubsample.controller.Worklist"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+>
+	<Panel>
+		<VBox>
+			<items>
+				<HBox justifyContent="SpaceBetween">
+					<items>
+						<HBox>
+							<items>
+								<Text text="복리후생 > 경조금 > 신규신청"/>
+							</items>
+						</HBox>
+						<HBox>
+							<items>
+								<Button text="재작성"/>
+								<Button text="임시저장"/>
+								<Button text="신청"/>
+								<Button text="취소"/>
+								<Button text="삭제"/>
+								<Button
+									icon="sap-icon://action"
+									type="Transparent"
+									text="프린트"
+								/>
+								<Button
+									icon="sap-icon://action"
+									type="Transparent"
+									text="도움말"
+								/>
+							</items>
+						</HBox>
+					</items>
+				</HBox>
+				<HBox>
+					<items>
+						<Text text="대상자 사원정보 Box"/>
+					</items>
+				</HBox>
+				<HBox>
+					<items>
+						<Text text="안내를 위한공간 Box"/>
+					</items>
+				</HBox>
+				<HBox>
+					<items>
+						<Label
+							text="신청내역"
+							design="Bold"
+						/>
+						<Text text="경조사유별 대상자 중복(성명/생년월일 비교)
+							시 신청불가"/>
+					</items>
+				</HBox>
+				<VBox>
+					<items>
+						<HBox>
+							<items>
+								<HBox>
+									<items>
+										<Label text="경조유형"/>
+										<Select
+											id="BenefitType"
+											selectedKey="{/FormData/Concode}"
+											items="{/BenefitType}"
+											width="200px"
+										>
+											<core:Item
+												text="{Ztext}"
+												key="{Zcode}"
+											/>
+										</Select>
+									</items>
+								</HBox>
+								<HBox>
+									<items>
+										<Label text="대상자 생년월일"/>
+										<DatePicker dateValue="{/FormData/Zbirthday}"/>
+									</items>
+								</HBox>
+							</items>
+						</HBox>
+						<HBox>
+							<items>
+								<HBox>
+									<items>
+										<Label text="경조사유"/>
+										<Select
+											id="BenefitCause"
+											selectedKey="{/FormData/Conresn}"
+											items="{/BenefitCause}"
+											width="200px"
+										>
+											<core:Item
+												text="{Ztext}"
+												key="{Zcode}"
+											/>
+										</Select>
+									</items>
+								</HBox>
+								<HBox>
+									<items>
+										<Label text="증빙상 경조일"/>
+										<DatePicker dateValue="{/FormData/Conddate}"/>
+									</items>
+								</HBox>
+							</items>
+						</HBox>
+						<HBox>
+							<items>
+								<HBox>
+									<items>
+										<Label text="대상자 관계"/>
+										<Select
+											id="BenefitRelation"
+											selectedKey="{/FormData/Kdsvh}"
+											items="{/BenefitRelation}"
+											width="200px"
+										>
+											<core:Item
+												text="{Ztext}"
+												key="{Zcode}"
+											/>
+										</Select>
+									</items>
+								</HBox>
+								<HBox>
+									<items>
+										<Label text="실재 경조일"/>
+										<DatePicker dateValue="{/FormData/Conrdate}"/>
+									</items>
+								</HBox>
+							</items>
+						</HBox>
+						<HBox>
+							<items>
+								<HBox>
+									<items>
+										<Label text="대상자 성명"/>
+										<Input value="{/FormData/Zname}"/>
+										<Button text="선택"/>
+									</items>
+								</HBox>
+								<HBox>
+									<items>
+										<Label text="행사장소"/>
+										<Input value="워커힐 그랜드 볼룸"/>
+									</items>
+								</HBox>
+							</items>
+						</HBox>
+						<HBox>
+							<items>
+								<HBox>
+									<items>
+										<Label text="기본급(원)"/>
+										<Text text="4,000,000"/>
+									</items>
+								</HBox>
+								<HBox>
+									<items>
+										<Label text="지급율"/>
+										<Text text="50%"/>
+									</items>
+								</HBox>
+							</items>
+						</HBox>
+						<HBox>
+							<items>
+								<HBox>
+									<items>
+										<Label text="지급액(원)"/>
+										<Text text="2,000,000"/>
+									</items>
+								</HBox>
+								<HBox>
+									<items>
+										<Label text="화환여부(Y/N)"/>
+										<Text text="Y"/>
+									</items>
+								</HBox>
+							</items>
+						</HBox>
+					</items>
+				</VBox>
+				<VBox>
+					<items>
+						<HBox>
+							<items>
+								<Label
+									text="신청자"
+									design="Bold"
+								/>
+							</items>
+						</HBox>
+						<VBox>
+							<items>
+								<HBox>
+									<items>
+										<HBox>
+											<items>
+												<Label text="성명"/>
+												<Text text="홍길동"/>
+											</items>
+										</HBox>
+										<HBox>
+											<items>
+												<Label text="소속"/>
+												<Text text="본사/인사팀"/>
+											</items>
+										</HBox>
+									</items>
+								</HBox>
+								<HBox>
+									<items>
+										<HBox>
+											<items>
+												<Label text="직급/직위"/>
+												<Text text="Senior Manager/부장"/>
+											</items>
+										</HBox>
+										<HBox>
+											<items>
+												<Label text="신청일시"/>
+												<Text text="2021.09.13 13:32"/>
+											</items>
+										</HBox>
+									</items>
+								</HBox>
+							</items>
+						</VBox>
+					</items>
+				</VBox>
+				<VBox>
+					<items>
+						<HBox>
+							<items>
+								<Label
+									text="결재내역"
+									design="Bold"
+								/>
+							</items>
+						</HBox>
+						<VBox>
+							<items>
+								<HBox>
+									<items>
+										<HBox>
+											<items>
+												<Label text="결재문서번호"/>
+												<Text text="12345678"/>
+											</items>
+										</HBox>
+										<HBox>
+											<items>
+												<Label text="결재상태"/>
+												<Text text="신청완료"/>
+											</items>
+										</HBox>
+									</items>
+								</HBox>
+								<HBox>
+									<items>
+										<HBox>
+											<items>
+												<Label text="담당자 결재일시"/>
+												<Text text="2021.09.15"/>
+											</items>
+										</HBox>
+										<HBox>
+											<items>
+												<Label text="반려사유"/>
+												<Text text="비어있음"/>
+											</items>
+										</HBox>
+									</items>
+								</HBox>
+							</items>
+						</VBox>
+					</items>
+				</VBox>
+			</items>
+		</VBox>
+	</Panel>
+</mvc:View>

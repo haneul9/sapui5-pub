@@ -107,6 +107,11 @@
 					"target": ["template1"]
 				},
 				{
+					"pattern": "template1Detail",
+					"name": "template1Detail",
+					"target": ["template1Detail"]
+				},
+				{
 					"pattern": "Products/{objectId}",
 					"name": "object",
 					"target": ["object"]
@@ -125,6 +130,12 @@
 					"viewId": "template1",
 					"viewLevel": 1,
 					"title": "Template 1"
+				},
+				"template1Detail": {
+					"viewName": "Template1Detail",
+					"viewId": "template1Detail",
+					"viewLevel": 1,
+					"title": "Template 1Detail"
 				},
 				"object": {
 					"viewName": "Object",
