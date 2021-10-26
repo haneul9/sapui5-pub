@@ -92,6 +92,7 @@
 					<Select
 						selectedKey="{/FormData/Concode}"
 						width="250px"
+						valueState="Warning"
 					>
 						<core:Item
 							text="{Ztext}"
@@ -102,11 +103,14 @@
 					<DatePicker
 						dateValue="{/FormData/Zbirthday}"
 						width="250px"
+						valueState="Warning"
+						class="sapIcon_Date"
 					/>
 					<Label text="경조사유"/>
 					<Select
 						selectedKey="{/FormData/Conresn}"
 						width="250px"
+						valueState="Warning"
 					>
 						<core:Item
 							text="{Ztext}"
@@ -117,11 +121,14 @@
 					<DatePicker
 						dateValue="{/FormData/Conddate}"
 						width="250px"
+						valueState="Warning"
+						class="sapIcon_Date"
 					/>
 					<Label text="대상자 관계"/>
 					<Select
 						selectedKey="{/FormData/Kdsvh}"
 						width="250px"
+						valueState="Warning"
 					>
 						<core:Item
 							text="{Ztext}"
@@ -132,17 +139,22 @@
 					<DatePicker
 						dateValue="{/FormData/Conrdate}"
 						width="250px"
+						valueState="Warning"
+						class="sapIcon_Date"
 					/>
 					<Label text="대상자 성명"/>
 					<Input
 						value="{/FormData/Zname}"
 						width="250px"
+						valueState="Warning"
 						showValueHelp="true"
+						class="sapIcon_Search"
 					/>
 					<Label text="행사장소"/>
 					<Input
 						value="워커힐 그랜드 볼룸"
 						width="250px"
+						valueState="Warning"
 					/>
 					<Label text="기본급(원)"/>
 					<Text text="4,000,000"/>

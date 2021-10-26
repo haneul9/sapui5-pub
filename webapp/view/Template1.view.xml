@@ -148,7 +148,10 @@
 							text="신청일"
 							design="Bold"
 						/>
-						<DateRangeSelection width="90%"/>
+						<DateRangeSelection
+							width="90%"
+							class="sapIcon_Date"
+						/>
 						<Label
 							text="진행상태"
 							design="Bold"
