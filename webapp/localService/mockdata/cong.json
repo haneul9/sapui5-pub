@@ -1,0 +1,410 @@
+{
+	"CongList": [
+		{
+			"No": "1",
+			"ZappSAl": "10",
+			"ZappStxtAl": "작성중",
+			"Pernr": "2000001",
+			"Ename": "김길동",
+			"Zzjikgbt": "부장",
+			"Orgtx": "인사기획",
+			"Famtx": "녀",
+			"Context": "결혼",
+			"Conddate": "2021.01.27",
+			"ZpayBetT": "1,000,000",
+			"Docynt": true
+		},
+		{
+			"No": "2",
+			"ZappSAl": "20",
+			"ZappStxtAl": "신청",
+			"Pernr": "2000001",
+			"Ename": "김길동",
+			"Zzjikgbt": "부장",
+			"Orgtx": "인사기획",
+			"Famtx": "녀",
+			"Context": "결혼",
+			"Conddate": "2021.01.27",
+			"ZpayBetT": "1,000,000",
+			"Docynt": true
+		},
+		{
+			"No": "3",
+			"ZappSAl": "40",
+			"ZappStxtAl": "승인",
+			"Pernr": "2000001",
+			"Ename": "김길동",
+			"Zzjikgbt": "부장",
+			"Orgtx": "인사기획",
+			"Famtx": "녀",
+			"Context": "결혼",
+			"Conddate": "2021.01.27",
+			"ZpayBetT": "1,000,000",
+			"Docynt": true
+		},
+		{
+			"No": "4",
+			"ZappSAl": "45",
+			"ZappStxtAl": "반려",
+			"Pernr": "2000001",
+			"Ename": "김길동",
+			"Zzjikgbt": "부장",
+			"Orgtx": "인사기획",
+			"Famtx": "녀",
+			"Context": "결혼",
+			"Conddate": "2021.01.27",
+			"ZpayBetT": "1,000,000",
+			"Docynt": true
+		},
+		{
+			"No": "5",
+			"ZappSAl": "60",
+			"ZappStxtAl": "완료",
+			"Pernr": "2000001",
+			"Ename": "김길동",
+			"Zzjikgbt": "부장",
+			"Orgtx": "인사기획",
+			"Famtx": "녀",
+			"Context": "결혼",
+			"Conddate": "2021.01.27",
+			"ZpayBetT": "1,000,000",
+			"Docynt": true
+		},
+		{
+			"No": "6",
+			"ZappSAl": "60",
+			"ZappStxtAl": "완료",
+			"Pernr": "2000001",
+			"Ename": "김길동",
+			"Zzjikgbt": "부장",
+			"Orgtx": "인사기획",
+			"Famtx": "녀",
+			"Context": "결혼",
+			"Conddate": "2021.01.27",
+			"ZpayBetT": "1,000,000",
+			"Docynt": true
+		},
+		{
+			"No": "7",
+			"ZappSAl": "60",
+			"ZappStxtAl": "완료",
+			"Pernr": "2000001",
+			"Ename": "김길동",
+			"Zzjikgbt": "부장",
+			"Orgtx": "인사기획",
+			"Famtx": "녀",
+			"Context": "결혼",
+			"Conddate": "2021.01.27",
+			"ZpayBetT": "1,000,000",
+			"Docynt": true
+		},
+		{
+			"No": "8",
+			"ZappSAl": "60",
+			"ZappStxtAl": "완료",
+			"Pernr": "2000001",
+			"Ename": "김길동",
+			"Zzjikgbt": "부장",
+			"Orgtx": "인사기획",
+			"Famtx": "녀",
+			"Context": "결혼",
+			"Conddate": "2021.01.27",
+			"ZpayBetT": "1,000,000",
+			"Docynt": true
+		},
+		{
+			"No": "9",
+			"ZappSAl": "60",
+			"ZappStxtAl": "완료",
+			"Pernr": "2000001",
+			"Ename": "김길동",
+			"Zzjikgbt": "부장",
+			"Orgtx": "인사기획",
+			"Famtx": "녀",
+			"Context": "결혼",
+			"Conddate": "2021.01.27",
+			"ZpayBetT": "1,000,000",
+			"Docynt": true
+		},
+		{
+			"No": "10",
+			"ZappSAl": "60",
+			"ZappStxtAl": "완료",
+			"Pernr": "2000001",
+			"Ename": "김길동",
+			"Zzjikgbt": "부장",
+			"Orgtx": "인사기획",
+			"Famtx": "녀",
+			"Context": "결혼",
+			"Conddate": "2021.01.27",
+			"ZpayBetT": "1,000,000",
+			"Docynt": true
+		},
+		{
+			"No": "11",
+			"ZappSAl": "60",
+			"ZappStxtAl": "완료",
+			"Pernr": "2000001",
+			"Ename": "김길동",
+			"Zzjikgbt": "부장",
+			"Orgtx": "인사기획",
+			"Famtx": "녀",
+			"Context": "결혼",
+			"Conddate": "2021.01.27",
+			"ZpayBetT": "1,000,000",
+			"Docynt": true
+		},
+		{
+			"No": "12",
+			"ZappSAl": "60",
+			"ZappStxtAl": "완료",
+			"Pernr": "2000001",
+			"Ename": "김길동",
+			"Zzjikgbt": "부장",
+			"Orgtx": "인사기획",
+			"Famtx": "녀",
+			"Context": "결혼",
+			"Conddate": "2021.01.27",
+			"ZpayBetT": "1,000,000",
+			"Docynt": true
+		},
+		{
+			"No": "13",
+			"ZappSAl": "60",
+			"ZappStxtAl": "완료",
+			"Pernr": "2000001",
+			"Ename": "김길동",
+			"Zzjikgbt": "부장",
+			"Orgtx": "인사기획",
+			"Famtx": "녀",
+			"Context": "결혼",
+			"Conddate": "2021.01.27",
+			"ZpayBetT": "1,000,000",
+			"Docynt": true
+		},
+		{
+			"No": "14",
+			"ZappSAl": "60",
+			"ZappStxtAl": "완료",
+			"Pernr": "2000001",
+			"Ename": "김길동",
+			"Zzjikgbt": "부장",
+			"Orgtx": "인사기획",
+			"Famtx": "녀",
+			"Context": "결혼",
+			"Conddate": "2021.01.27",
+			"ZpayBetT": "1,000,000",
+			"Docynt": true
+		},
+		{
+			"No": "15",
+			"ZappSAl": "60",
+			"ZappStxtAl": "완료",
+			"Pernr": "2000001",
+			"Ename": "김길동",
+			"Zzjikgbt": "부장",
+			"Orgtx": "인사기획",
+			"Famtx": "녀",
+			"Context": "결혼",
+			"Conddate": "2021.01.27",
+			"ZpayBetT": "1,000,000",
+			"Docynt": true
+		},
+		{
+			"No": "16",
+			"ZappSAl": "60",
+			"ZappStxtAl": "완료",
+			"Pernr": "2000001",
+			"Ename": "김길동",
+			"Zzjikgbt": "부장",
+			"Orgtx": "인사기획",
+			"Famtx": "녀",
+			"Context": "결혼",
+			"Conddate": "2021.01.27",
+			"ZpayBetT": "1,000,000",
+			"Docynt": true
+		}
+	],
+	"FileList" : [
+		{
+			"idx": 1,
+			"gubun": "10",
+			"fileName": "JES_01.pdf",
+			"fileUrl": "https://www.naver.com/JES_01.pdf"
+		},
+		{
+			"idx": 2,
+			"gubun": "20",
+			"fileName": "JES_02.pdf",
+			"fileUrl": "https://www.naver.com/JES_02.pdf"
+		}
+	],
+	"ProductCollectionStats": {
+		"Counts": {
+			"Total": 123,
+			"Weight": {
+				"Ok": 53,
+				"Heavy": 51,
+				"Overweight": 19
+			}
+		},
+		"Groups": {
+			"Category": {
+				"Accessories" : 34,
+				"Desktop Computers" : 7,
+				"Flat Screens" : 2,
+				"Keyboards" : 4,
+				"Laptops" : 11,
+				"Printers" : 9,
+				"Smartphones and Tablets" : 9,
+				"Mice" : 7,
+				"Computer System Accessories" : 8,
+				"Graphics Card" : 4,
+				"Scanners" : 4,
+				"Speakers" : 3,
+				"Software" : 8,
+				"Telekommunikation" : 3,
+				"Servers" : 3,
+				"Flat Screen TVs" : 3
+			},
+			"SupplierName": {
+				"Titanium": 21,
+				"Technocom": 22,
+				"Red Point Stores": 7,
+				"Very Best Screens": 14,
+				"Smartcards": 2,
+				"Alpha Printers": 5,
+				"Printer for All": 8,
+				"Oxynum": 8,
+				"Fasttech": 15,
+				"Ultrasonic United": 15,
+				"Speaker Experts": 3,
+				"Brainsoft": 3
+			}
+		},
+		"Filters": [
+			{
+				"type": "Category",
+				"values": [
+					{
+						"text": "Accessories",
+						"data": 34
+					},
+					{
+						"text": "Desktop Computers",
+						"data": 7
+					},
+					{
+						"text": "Flat Screens",
+						"data": 2
+					},
+					{
+						"text": "Keyboards",
+						"data": 4
+					},
+					{
+						"text": "Laptops",
+						"data": 11
+					},
+					{
+						"text": "Printers",
+						"data": 9
+					},
+					{
+						"text": "Smartphones and Tablets",
+						"data": 9
+					},
+					{
+						"text": "Mice",
+						"data": 7
+					},
+					{
+						"text": "Computer System Accessories",
+						"data": 8
+					},
+					{
+						"text": "Graphics Card",
+						"data": 4
+					},
+					{
+						"text": "Scanners",
+						"data": 4
+					},
+					{
+						"text": "Speakers",
+						"data": 3
+					},
+					{
+						"text": "Software",
+						"data": 8
+					},
+					{
+						"text": "Telekommunikation",
+						"data": 3
+					},
+					{
+						"text": "Servers",
+						"data": 3
+					},
+					{
+					  "text": "Flat Screen TVs",
+					  "data": 3
+					}
+				]
+			},
+			{
+				"type": "SupplierName",
+				"values": [
+					{
+					"text": "Titanium",
+					"data": 21
+				  },
+				  {
+					"text": "Technocom",
+					"data": 22
+				  },
+				  {
+					"text": "Red Point Stores",
+					"data": 7
+				  },
+				  {
+					"text": "Very Best Screens",
+					"data": 14
+				  },
+				  {
+					"text": "Smartcards",
+					"data": 2
+				  },
+				  {
+					"text": "Alpha Printers",
+					"data": 5
+				  },
+				  {
+					"text": "Printer for All",
+					"data": 8
+				  },
+				  {
+					"text": "Oxynum",
+					"data": 8
+				  },
+				  {
+					"text": "Fasttech",
+					"data": 15
+				  },
+				  {
+					"text": "Ultrasonic United",
+					"data": 15
+				  },
+				  {
+					"text": "Speaker Experts",
+					"data": 3
+				  },
+				  {
+					"text": "Brainsoft",
+					"data": 3
+				  }
+				]
+			}
+		]
+	}
+}

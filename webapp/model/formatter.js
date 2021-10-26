@@ -15,6 +15,23 @@ sap.ui.define([], function () {
 			return parseFloat(sValue).toFixed(2);
 		},
 
+		rowHighlight: function (sValue) {
+			switch (sValue) {
+				case "10":
+					return sap.ui.core.IndicationColor.Indication01;
+				case "20":
+					return sap.ui.core.IndicationColor.Indication03;
+				case "40":
+					return sap.ui.core.IndicationColor.Indication04;
+				case "45":
+					return sap.ui.core.IndicationColor.Indication02;
+				case "60":
+					return sap.ui.core.IndicationColor.Indication05;
+				default:
+					return null;
+			}
+		},
+
 		weightState: function (fMeasure, sUnit) {
 			// Boarder values for different status of weight
 			var fMaxWeightSuccess = 1;
