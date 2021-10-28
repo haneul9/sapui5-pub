@@ -9,9 +9,13 @@
 	<Page showHeader="false">
 		<VBox>
 			<HBox justifyContent="SpaceBetween">
-				<HBox>
-					<Text text="복리후생 > 경조금 > 신규신청"/>
-				</HBox>
+				<Breadcrumbs
+					currentLocationText="신규신청"
+					separatorStyle="GreaterThan"
+				>
+					<Link text="복리후생"/>
+					<Link text="경조금"/>
+				</Breadcrumbs>
 				<HBox>
 					<Button
 						type="Emphasized"

@@ -705,7 +705,11 @@
 											</OverflowToolbar>
 										</table:extension>
 										<table:columns>
-											<table:Column width="11rem">
+											<table:Column
+												width="11rem"
+												filterProperty="name"
+												sortProperty="name"
+											>
 												<Label text="Product Name"/>
 												<table:template>
 													<Text
