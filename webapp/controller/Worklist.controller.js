@@ -3,12 +3,13 @@ sap.ui.define(
 		"./BaseController", //
 		"sap/ui/model/json/JSONModel",
 		"../model/formatter",
+		"sap/m/MessageBox",
 		"sap/ui/core/Fragment",
 		"sap/ui/model/Filter",
 		"sap/ui/model/FilterOperator",
 		"sap/m/MessageToast",
 	],
-	function (BaseController, JSONModel, formatter, Fragment, Filter, FilterOperator, MessageToast) {
+	function (BaseController, JSONModel, formatter, MessageBox, Fragment, Filter, FilterOperator, MessageToast) {
 		"use strict";
 
 		return BaseController.extend("pub.pubsample.controller.Worklist", {
@@ -23,10 +24,34 @@ sap.ui.define(
 			 * @public
 			 */
 			onInit: function () {
-				var oModel = new JSONModel(sap.ui.require.toUrl("pub/pubsample/localService/mockdata/cong.json"));
+				var oModel = new JSONModel(sap.ui.require.toUrl("pub/pubsample/localService/mockdata/products.json"));
 				// The default limit of the model is set to 100. We want to show all the entries.
 				oModel.setSizeLimit(100000);
 				this.getView().setModel(oModel);
+			},
+
+			onConfirmationMessageBoxPress: function () {
+				MessageBox.confirm("Approve purchase order 12345?");
+			},
+
+			onAlertMessageBoxPress: function () {
+				MessageBox.alert("The quantity you have reported exceeds the quantity planed.");
+			},
+
+			onErrorMessageBoxPress: function () {
+				MessageBox.error('Select a team in the "Development" area.\n"Marketing" isn\'t assigned to this area.');
+			},
+
+			onInfoMessageBoxPress: function () {
+				MessageBox.information("Your booking will be reserved for 24 hours.");
+			},
+
+			onWarningMessageBoxPress: function () {
+				MessageBox.warning("The project schedule was last updated over a year ago.");
+			},
+
+			onSuccessMessageBoxPress: function () {
+				MessageBox.success('Project 1234567 was created and assigned to team "ABC".');
 			},
 
 			/* =========================================================== */
