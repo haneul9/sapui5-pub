@@ -102,6 +102,11 @@
 					"target": ["worklist"]
 				},
 				{
+					"pattern": "layout",
+					"name": "layout",
+					"target": ["layout"]
+				},
+				{
 					"pattern": "template1",
 					"name": "template1",
 					"target": ["template1"]
@@ -124,6 +129,12 @@
 					"viewId": "worklist",
 					"viewLevel": 1,
 					"title": "Components"
+				},
+				"layout": {
+					"viewName": "Layout",
+					"viewId": "layout",
+					"viewLevel": 1,
+					"title": "Layout Components"
 				},
 				"template1": {
 					"viewName": "Template1",

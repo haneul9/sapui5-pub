@@ -1,0 +1,241 @@
+<mvc:View controllerName="pub.pubsample.controller.Layout"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:table="sap.ui.table"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns="sap.m">
+    <Page title="Layout Components">
+        <VBox width="auto">
+            <Title level="H2" text="1.Overview 대상자 정보" class="sapUiResponsiveMargin"/>
+            <HBox justifyContent="SpaceAround">
+                <VBox class="hCardBox" width="33%">
+                    <HBox justifyContent="SpaceBetween">
+                        <HBox>
+                            <Title level="H2" text="대상자 정보" />
+                        </HBox>
+                        <Button type="Transparent" icon="sap-icon://employee-approvals" />
+                    </HBox>
+                    <HBox>
+                        <VBox width="30%" justifyContent="Center" alignItems="Center">
+                            <Image src="https://i1.wp.com/jejuhydrofarms.com/wp-content/uploads/2020/05/blank-profile-picture-973460_1280.png?ssl=1" height="50px" width="50px" />
+                        </VBox>
+                        <VBox>
+                            <Text text="홍길동 팀장" textAlign="Begin" textDirection="Inherit" width="" wrapping="true" wrappingType="Normal" />
+                            <Text text="예스코홀딩스 인사기획팀" textAlign="Begin" textDirection="Inherit" width="" wrapping="true" wrappingType="Normal" />
+                            <Text text="경영관리직 / 12345" textAlign="Begin" textDirection="Inherit" width="" wrapping="true" wrappingType="Normal" />
+                        </VBox>
+                    </HBox>
+                </VBox>
+                <VBox class="hCardBox" width="33%">
+                </VBox>
+                <VBox class="hCardBox" width="33%">
+                    <HBox justifyContent="SpaceBetween">
+                        <Title text="조회조건" level="H2" />
+                        <Button type="Transparent" icon="sap-icon://search" />
+                    </HBox>
+                    <grid:CSSGrid gridTemplateColumns="1fr 3fr" gridGap="8px">
+                        <Label text="신청일" design="Bold" />
+                        <DateRangeSelection width="90%" class="sapIcon_Date" />
+                        <Label text="진행상태" design="Bold" labelFor="secondCondition" />
+                        <Select width="90%" items="{
+								path: '/ProductCollection',
+								sorter: {
+									path: 'text'
+								},
+								templateShareable: true
+							}">
+                            <core:Item key="{ProductId}" text="{Name}" />
+                        </Select>
+                    </grid:CSSGrid>
+                </VBox>
+            </HBox>
+            <Title level="H2" text="2.Overview 리스트" class="sapUiResponsiveMargin"/>
+            <VBox class="vCardBox">
+                <HBox justifyContent="SpaceBetween">
+                    <HBox>
+                        <Title level="H3" text="신청내역" />
+                        <Text text="total 12"/>
+                    </HBox>
+                    <HBox>
+                        <HBox>
+                            <core:Icon src="sap-icon://circle-task-2" color="#bdbdbd" />
+                            <Label text="작성중 12"/>
+                            <core:Icon src="sap-icon://circle-task-2" color="#ffc107" />
+                            <Label text="신청 3"/>
+                            <core:Icon src="sap-icon://circle-task-2" color="#28a745" />
+                            <Label text="승인 5"/>
+                            <core:Icon src="sap-icon://circle-task-2" color="#dc3545" />
+                            <Label text="반려 6"/>
+                            <core:Icon src="sap-icon://circle-task-2" color="#1d85c8" />
+                            <Label text="완료 4"/>
+                        </HBox>
+                        <Button icon="sap-icon://excel-attachment" text="Excel" />
+                    </HBox>
+                </HBox>
+                <table:Table id="conguTable" width="100%" rows="{/CongList}" selectionMode="MultiToggle" rowHeight="37" columnHeaderHeight="38">
+                    <table:rowSettingsTemplate>
+                        <table:RowSettings highlight="{
+							path: 'ZappSAl',
+							formatter: '.formatter.rowHighlight'
+						}"/>
+                    </table:rowSettingsTemplate>
+                    <table:columns>
+                        <table:Column width="13%">
+                            <Label text="상태"/>
+                            <table:template>
+                                <Text text="{ZappStxtAl}" width="100%" textAlign="Center">
+                                    <customData>
+                                        <core:CustomData key="status" value="{ZappSAl}" writeToDom="true" />
+                                    </customData>
+                                </Text>
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="13%">
+                            <Label text="성명"/>
+                            <table:template>
+                                <Text text="{Ename}" width="100%" textAlign="Center" wrapping="false" class="tableRow_Text" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="13%">
+                            <Label text="직급"/>
+                            <table:template>
+                                <Text text="{Zzjikgbt}" width="100%" textAlign="Center" wrapping="false" class="tableRow_Text" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="13%">
+                            <Label text="소속부서"/>
+                            <table:template>
+                                <Text text="{Orgtx}" width="100%" textAlign="Center" wrapping="false" class="tableRow_Text" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="13%">
+                            <Label text="경조구분"/>
+                            <table:template>
+                                <Text text="{Context}" width="100%" textAlign="Center" wrapping="false" class="tableRow_Text" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="13%">
+                            <Label text="관계"/>
+                            <table:template>
+                                <Text text="{Famtx}" width="100%" textAlign="Center" wrapping="false" class="tableRow_Text" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="13%">
+                            <Label text="경조일"/>
+                            <table:template>
+                                <Text text="{Conddate}" width="100%" textAlign="Center" wrapping="false" class="tableRow_Text" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="13%">
+                            <Label text="지급금액" width="100%" textAlign="End" />
+                            <table:template>
+                                <Text text="{ZpayBetT}" width="100%" textAlign="End" wrapping="false" class="tableRow_Text" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column>
+                            <Label text="증빙"/>
+                            <table:template>
+                                <Button type="Transparent" icon="sap-icon://edit" />
+                            </table:template>
+                        </table:Column>
+                    </table:columns>
+                </table:Table>
+            </VBox>
+            <Title level="H2" text="3.Detail 사원 정보" class="sapUiResponsiveMargin"/>
+            <HBox class="vCardBox" justifyContent="SpaceBetween">
+                <HBox>
+                    <Image src="https://i1.wp.com/jejuhydrofarms.com/wp-content/uploads/2020/05/blank-profile-picture-973460_1280.png?ssl=1" height="35px" width="35px" />
+                    <Text text="홍길동"/>
+                    <Text text="부장/팀장"/>
+                    <Text text="예스코홀딩스 인사기획팀"/>
+                    <Text text="경영관리직/12345"/>
+                </HBox>
+            </HBox>
+            <Title level="H2" text="4.Detail 안내" class="sapUiResponsiveMargin"/>
+            <HBox class="vCardBox" justifyContent="SpaceBetween">
+                <HBox>
+                    <VBox>
+                        <core:Icon src="sap-icon://travel-request"/>
+                    </VBox>
+                    <VBox>
+                        <Text text="안내를 위한 공간입니다."/>
+                        <Text text="안내를 위한 공간입니다."/>
+                        <Text text="안내를 위한 공간입니다."/>
+                    </VBox>
+                </HBox>
+                <Button type="Transparent" icon="sap-icon://decline" />
+            </HBox>
+            <Title level="H2" text="5.첨부파일" class="sapUiResponsiveMargin"/>
+            <VBox class="vCardBox">
+                <HBox justifyContent="SpaceBetween">
+                    <HBox>
+                        <Title level="H2" text="첨부파일" />
+                        <Text text="증빙자료를 꼭 등록 해주세요."/>
+                    </HBox>
+                    <HBox>
+                        <Button icon="sap-icon://add" text="추가" />
+                        <Button icon="sap-icon://less" text="삭제" />
+                    </HBox>
+                </HBox>
+                <table:Table id="attachTable" width="100%" visibleRowCount="1" rows="{/FileList}">
+                    <table:columns>
+                        <table:Column width="4%">
+                            <Label text="No"/>
+                            <table:template>
+                                <Text text="{idx}" width="100%" textAlign="Center" />
+                            </table:template>
+                        </table:Column>
+                        <table:Column width="8%">
+                            <Label text="유형"/>
+                            <table:template>
+                                <Select selectedKey="{gubun}">
+                                    <core:Item key="00" text="선택" />
+                                    <core:Item key="10" text="5대암" />
+                                    <core:Item key="20" text="난임" />
+                                </Select>
+                            </table:template>
+                        </table:Column>
+                        <table:Column>
+                            <Label text="첨부파일" width="100%" />
+                            <table:template>
+                                <Link text="{fileName}" href="{fileUrl}" width="100%" textAlign="Begin" />
+                            </table:template>
+                        </table:Column>
+                    </table:columns>
+                </table:Table>
+            </VBox>
+            <Title level="H2" text="6.신청자" class="sapUiResponsiveMargin"/>
+            <VBox class="vCardBox">
+                <HBox>
+                    <Title level="H2" text="신청자" />
+                </HBox>
+                <grid:CSSGrid gridTemplateColumns="1fr 3fr 1fr 3fr" gridGap="8px">
+                    <Label text="성명"/>
+                    <Text text="홍길동"/>
+                    <Label text="소속"/>
+                    <Text text="본사/인사팀"/>
+                    <Label text="직급/직위"/>
+                    <Text text="Senior Manager/부장"/>
+                    <Label text="신청일시"/>
+                    <Text text="2021.09.13 13:32"/>
+                </grid:CSSGrid>
+            </VBox>
+            <Title level="H2" text="7.결재내역" class="sapUiResponsiveMargin"/>
+            <VBox class="vCardBox">
+                <HBox>
+                    <Title level="H2" text="결재내역" />
+                </HBox>
+                <grid:CSSGrid gridTemplateColumns="1fr 3fr 1fr 3fr" gridGap="8px">
+                    <Label text="결재문서번호"/>
+                    <Text text="12345678"/>
+                    <Label text="결재상태"/>
+                    <Text text="신청완료"/>
+                    <Label text="담당자 결재일시"/>
+                    <Text text="2021.09.15"/>
+                    <Label text="반려사유"/>
+                    <Text text="비어있음"/>
+                </grid:CSSGrid>
+            </VBox>
+        </VBox>
+    </Page>
+</mvc:View>
