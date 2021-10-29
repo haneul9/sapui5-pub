@@ -4,7 +4,6 @@
 	xmlns:table="sap.ui.table"
 	xmlns:core="sap.ui.core"
 	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:u="sap.ui.unified"
 	xmlns:pub="sap.ui.pub.control"
 >
 	<Page
@@ -30,6 +29,101 @@
 								<Link text="복리후생"/>
 								<Link text="경조금 신청"/>
 							</Breadcrumbs>
+						</HBox>
+					</VBox>
+				</HBox>
+				<HBox
+					class="sapUiResponsiveMargin"
+					width="auto"
+				>
+					<VBox width="100%">
+						<Title
+							level="H3"
+							text="Tab container"
+						/>
+						<HBox>
+							<IconTabBar selectedKey="Attachments">
+								<layoutData>
+									<FlexItemData growFactor="1"/>
+								</layoutData>
+								<items>
+									<IconTabFilter
+										text="Info"
+										key="Info"
+									>
+										<Text text="Info content goes here ..."/>
+									</IconTabFilter>
+									<IconTabFilter
+										text="Attachments"
+										key="Attachments"
+									>
+										<Text text="Attachments go here ..."/>
+									</IconTabFilter>
+									<IconTabFilter
+										text="Notes"
+										key="Notes"
+									>
+										<Text text="Notes go here ..."/>
+									</IconTabFilter>
+									<IconTabFilter
+										text="People"
+										key="People"
+									>
+										<Text text="People content goes here ..."/>
+									</IconTabFilter>
+								</items>
+							</IconTabBar>
+						</HBox>
+					</VBox>
+				</HBox>
+				<HBox
+					class="sapUiResponsiveMargin"
+					width="auto"
+				>
+					<VBox width="100%">
+						<Title
+							level="H3"
+							text="Panel"
+						/>
+						<HBox>
+							<Panel
+								expandable="true"
+								width="auto"
+							>
+								<layoutData>
+									<FlexItemData growFactor="1"/>
+								</layoutData>
+								<headerToolbar>
+									<OverflowToolbar
+										height="3rem"
+										style="Clear"
+									>
+										<Title text="Custom Toolbar with a header text"/>
+										<ToolbarSpacer/>
+										<Button icon="sap-icon://drop-down-list"/>
+									</OverflowToolbar>
+								</headerToolbar>
+								<content>
+									<Text text="Lorem ipsum dolor st amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat"/>
+								</content>
+							</Panel>
+						</HBox>
+					</VBox>
+				</HBox>
+				<HBox
+					class="sapUiResponsiveMargin"
+					width="auto"
+				>
+					<VBox>
+						<Title
+							level="H3"
+							text="Dialog"
+						/>
+						<HBox>
+							<Button
+								text="사원검색"
+								press=".openEmployeeDialog"
+							/>
 						</HBox>
 					</VBox>
 				</HBox>
@@ -557,32 +651,26 @@
 						<HBox>
 							<Button
 								text="Confirm"
-								class="sapUiSmallMarginBottom"
 								press=".onConfirmationMessageBoxPress"
 							/>
 							<Button
 								text="Alert"
-								class="sapUiSmallMarginBottom"
 								press=".onAlertMessageBoxPress"
 							/>
 							<Button
 								text="Error"
-								class="sapUiSmallMarginBottom"
 								press=".onErrorMessageBoxPress"
 							/>
 							<Button
 								text="Info"
-								class="sapUiSmallMarginBottom"
 								press=".onInfoMessageBoxPress"
 							/>
 							<Button
 								text="Warning"
-								class="sapUiSmallMarginBottom"
 								press=".onWarningMessageBoxPress"
 							/>
 							<Button
 								text="Success"
-								class="sapUiSmallMarginBottom"
 								press=".onSuccessMessageBoxPress"
 							/>
 						</HBox>
@@ -908,9 +996,7 @@
 								>
 									<Label text="Status"/>
 									<table:template>
-										<core:Icon src="{
-											path: 'Available'
-										}"/>
+										<core:Icon src="sap-icon://appear-offline"/>
 									</table:template>
 								</table:Column>
 								<table:Column
@@ -1135,9 +1221,7 @@
 								>
 									<Label text="Status"/>
 									<table:template>
-										<core:Icon src="{
-											path: 'Available'
-										}"/>
+										<core:Icon src="sap-icon://appear-offline"/>
 									</table:template>
 								</table:Column>
 								<table:Column
@@ -1160,6 +1244,147 @@
 											}"
 											class="sapIcon_Date"
 										/>
+									</table:template>
+								</table:Column>
+							</table:columns>
+						</table:Table>
+					</VBox>
+				</HBox>
+				<HBox
+					class="sapUiResponsiveMargin"
+					width="auto"
+				>
+					<VBox>
+						<Title
+							level="H3"
+							text="Table no data"
+						/>
+						<table:Table
+							rows="{/ProductCollection2}"
+							visibleRowCount="5"
+							ariaLabelledBy="title"
+							noData="No data found"
+						>
+							<table:extension>
+								<OverflowToolbar style="Clear">
+									<Title
+										id="title3"
+										text="Products"
+									/>
+								</OverflowToolbar>
+							</table:extension>
+							<table:columns>
+								<table:Column
+									width="10%"
+									hAlign="Center"
+									filterProperty="name"
+									sortProperty="name"
+								>
+									<Label text="사번"/>
+									<table:template>
+										<Text
+											text="{Name}"
+											wrapping="false"
+										/>
+									</table:template>
+								</table:Column>
+								<table:Column
+									width="10%"
+									hAlign="Center"
+									filterProperty="ProductId"
+									sortProperty="ProductId"
+								>
+									<Label text="성명"/>
+									<table:template>
+										<Input value="{ProductId}"/>
+									</table:template>
+								</table:Column>
+								<table:Column
+									width="10%"
+									hAlign="Center"
+									filterProperty="Quantity"
+									sortProperty="Quantity"
+								>
+									<Label text="조직"/>
+									<table:template>
+										<Text text="{Quantity}"/>
+									</table:template>
+								</table:Column>
+								<table:Column
+									width="10%"
+									hAlign="Center"
+									filterProperty="Status"
+									sortProperty="Status"
+								>
+									<Label text="직급"/>
+									<table:template>
+										<Text text="{Status}"/>
+									</table:template>
+								</table:Column>
+								<table:Column
+									width="10%"
+									hAlign="Center"
+									filterProperty="Price"
+									sortProperty="Price"
+								>
+									<Label text="직책"/>
+									<table:template>
+										<Text text="{Price}"/>
+									</table:template>
+								</table:Column>
+								<table:Column
+									width="10%"
+									hAlign="Center"
+									filterProperty="Supplier"
+									sortProperty="Supplier"
+								>
+									<Label text="업무"/>
+									<table:template>
+										<Text text="{SupplierName}"/>
+									</table:template>
+								</table:Column>
+								<table:Column
+									width="10%"
+									hAlign="Center"
+									filterProperty="Supplier"
+									sortProperty="Supplier"
+								>
+									<Label text="신청"/>
+									<table:template>
+										<Text text="{UoM}"/>
+									</table:template>
+								</table:Column>
+								<table:Column
+									width="10%"
+									hAlign="Center"
+									filterProperty="Supplier"
+									sortProperty="Supplier"
+								>
+									<Label text="시작일"/>
+									<table:template>
+										<Text text="{UoM}"/>
+									</table:template>
+								</table:Column>
+								<table:Column
+									width="10%"
+									hAlign="Center"
+									filterProperty="Supplier"
+									sortProperty="Supplier"
+								>
+									<Label text="종료일"/>
+									<table:template>
+										<Text text="{UoM}"/>
+									</table:template>
+								</table:Column>
+								<table:Column
+									width="10%"
+									hAlign="Center"
+									filterProperty="Category"
+									sortProperty="Category"
+								>
+									<Label text="결재일"/>
+									<table:template>
+										<Text text="{UoM}"/>
 									</table:template>
 								</table:Column>
 							</table:columns>

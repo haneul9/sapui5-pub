@@ -54,6 +54,28 @@ sap.ui.define(
 				MessageBox.success('Project 1234567 was created and assigned to team "ABC".');
 			},
 
+			openEmployeeDialog: function () {
+				var oView = this.getView();
+
+				if (!this._pEmployeeDialog) {
+					this._pEmployeeDialog = Fragment.load({
+						id: oView.getId(),
+						name: "pub.pubsample.view.EmployeeDialog",
+						controller: this,
+					}).then(function (oDialog) {
+						oView.addDependent(oDialog);
+						return oDialog;
+					});
+				}
+				this._pEmployeeDialog.then(function (oDialog) {
+					oDialog.open();
+				});
+			},
+
+			onEmployeeClose: function () {
+				this.byId("employeeDialog").close();
+			},
+
 			/* =========================================================== */
 			/* event handlers                                              */
 			/* =========================================================== */
