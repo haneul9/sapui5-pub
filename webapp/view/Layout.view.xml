@@ -6,7 +6,36 @@
     xmlns="sap.m">
     <Page title="Layout Components">
         <VBox width="auto">
-            <Title level="H2" text="1.Overview 대상자 정보" class="sapUiResponsiveMargin"/>
+            <Title level="H2" text="1. Overview 네비게이션 &amp; 버튼" class="sapUiResponsiveMargin"/>
+            <HBox justifyContent="SpaceBetween">
+                <Breadcrumbs currentLocationText="경조금" separatorStyle="GreaterThan">
+                    <Link text="복리후생"/>
+                </Breadcrumbs>
+                <HBox>
+                    <Button type="Emphasized" text="신청" />
+                    <Button type="Transparent" icon="sap-icon://print" text="프린트" />
+                    <Button type="Transparent" icon="sap-icon://sys-help" text="도움말" />
+                </HBox>
+            </HBox>
+            <HBox justifyContent="SpaceBetween">
+                <Breadcrumbs currentLocationText="신규신청" separatorStyle="GreaterThan">
+                    <Link text="복리후생"/>
+                    <Link text="경조금"/>
+                </Breadcrumbs>
+                <HBox>
+                    <Button type="Emphasized" text="저장" />
+                    <Button type="Emphasized" text="신청" />
+                    <Button type="Transparent" icon="sap-icon://print" text="프린트" />
+                    <Button type="Transparent" icon="sap-icon://sys-help" text="도움말" />
+                </HBox>
+            </HBox>
+            <HBox justifyContent="SpaceBetween">
+                <Breadcrumbs currentLocationText="상세조회" separatorStyle="GreaterThan">
+                    <Link text="복리후생"/>
+                    <Link text="경조금"/>
+                </Breadcrumbs>
+            </HBox>
+            <Title level="H2" text="2. Overview 대상자 정보" class="sapUiResponsiveMargin"/>
             <HBox justifyContent="SpaceAround">
                 <VBox class="hCardBox" width="33%">
                     <HBox justifyContent="SpaceBetween">
@@ -49,7 +78,7 @@
                     </grid:CSSGrid>
                 </VBox>
             </HBox>
-            <Title level="H2" text="2.Overview 리스트" class="sapUiResponsiveMargin"/>
+            <Title level="H2" text="3. Overview 리스트" class="sapUiResponsiveMargin"/>
             <VBox class="vCardBox">
                 <HBox justifyContent="SpaceBetween">
                     <HBox>
@@ -141,7 +170,7 @@
                     </table:columns>
                 </table:Table>
             </VBox>
-            <Title level="H2" text="3.Detail 사원 정보" class="sapUiResponsiveMargin"/>
+            <Title level="H2" text="4. Detail 사원 정보" class="sapUiResponsiveMargin"/>
             <HBox class="vCardBox" justifyContent="SpaceBetween">
                 <HBox>
                     <Image src="https://i1.wp.com/jejuhydrofarms.com/wp-content/uploads/2020/05/blank-profile-picture-973460_1280.png?ssl=1" height="35px" width="35px" />
@@ -151,7 +180,7 @@
                     <Text text="경영관리직/12345"/>
                 </HBox>
             </HBox>
-            <Title level="H2" text="4.Detail 안내" class="sapUiResponsiveMargin"/>
+            <Title level="H2" text="5. Detail 안내" class="sapUiResponsiveMargin"/>
             <HBox class="vCardBox" justifyContent="SpaceBetween">
                 <HBox>
                     <VBox>
@@ -165,7 +194,7 @@
                 </HBox>
                 <Button type="Transparent" icon="sap-icon://decline" />
             </HBox>
-            <Title level="H2" text="5.첨부파일" class="sapUiResponsiveMargin"/>
+            <Title level="H2" text="6. 첨부파일" class="sapUiResponsiveMargin"/>
             <VBox class="vCardBox">
                 <HBox justifyContent="SpaceBetween">
                     <HBox>
@@ -177,7 +206,7 @@
                         <Button icon="sap-icon://less" text="삭제" />
                     </HBox>
                 </HBox>
-                <table:Table id="attachTable" width="100%" visibleRowCount="1" rows="{/FileList}">
+                <table:Table id="attachTable" width="100%" visibleRowCount="2" rows="{/FileList}">
                     <table:columns>
                         <table:Column width="4%">
                             <Label text="No"/>
@@ -204,7 +233,7 @@
                     </table:columns>
                 </table:Table>
             </VBox>
-            <Title level="H2" text="6.신청자" class="sapUiResponsiveMargin"/>
+            <Title level="H2" text="7. 신청자" class="sapUiResponsiveMargin"/>
             <VBox class="vCardBox">
                 <HBox>
                     <Title level="H2" text="신청자" />
@@ -220,7 +249,7 @@
                     <Text text="2021.09.13 13:32"/>
                 </grid:CSSGrid>
             </VBox>
-            <Title level="H2" text="7.결재내역" class="sapUiResponsiveMargin"/>
+            <Title level="H2" text="8. 결재내역" class="sapUiResponsiveMargin"/>
             <VBox class="vCardBox">
                 <HBox>
                     <Title level="H2" text="결재내역" />
