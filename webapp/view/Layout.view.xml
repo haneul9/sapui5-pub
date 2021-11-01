@@ -101,7 +101,7 @@
                         <Button icon="sap-icon://excel-attachment" text="Excel" />
                     </HBox>
                 </HBox>
-                <table:Table id="conguTable" width="100%" rows="{/CongList}" selectionMode="MultiToggle" rowHeight="37" columnHeaderHeight="38">
+                <table:Table id="conguTable" width="100%" rows="{/CongList}" selectionMode="MultiToggle" busyIndicatorDelay="0" busy="false">
                     <table:rowSettingsTemplate>
                         <table:RowSettings highlight="{
 							path: 'ZappSAl',
