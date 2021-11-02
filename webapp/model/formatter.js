@@ -57,5 +57,45 @@ sap.ui.define([], function () {
 				}
 			}
 		},
+
+		/*
+	@param o = {
+		table: sap.ui.table.Table instance
+		colIndices: rowspan을 적용할 column index array
+		theadOrTbody: "header" or "table"
+	}
+	*/
+		adjustRowSpan: function (o) {
+			$.each(o.colIndices || [], function (j, colIndex) {
+				var selector = `#${o.table.getId()}-${o.theadOrTbody} tbody>tr td:nth-child(${colIndex + 1}):visible`;
+				var tds = $(selector).get(),
+					prevTD = tds.shift();
+
+				$.each(tds, function (i, td) {
+					var p = $(prevTD),
+						c = $(td);
+					if (c.text() === p.text()) {
+						p.attr("rowspan", Number(p.attr("rowspan") || 1) + 1);
+						c.hide();
+					} else {
+						prevTD = td;
+					}
+				});
+			});
+		},
+
+		summaryColspan: function () {
+			const $firstTD = $("#container-pubsample---worklist--groupTable-rows-row3-col0");
+			const $firstCheckbox = $("#container-pubsample---worklist--groupTable-rowsel3");
+			const aHideTDs = [1, 2, 3, 4, 5];
+
+			$firstTD.attr("colspan", 6);
+			$firstCheckbox.hide();
+
+			aHideTDs.forEach((idx) => {
+				const $selectTD = $(`#container-pubsample---worklist--groupTable-rows-row3-col${idx}`);
+				$selectTD.hide();
+			});
+		},
 	};
 });

@@ -28,6 +28,23 @@ sap.ui.define(
 				// The default limit of the model is set to 100. We want to show all the entries.
 				oModel.setSizeLimit(100000);
 				this.getView().setModel(oModel);
+
+				const oTable = this.byId("groupTable");
+
+				oTable.addEventDelegate(
+					{
+						onAfterRendering: function () {
+							formatter.adjustRowSpan({
+								table: this,
+								colIndices: [0, 1, 2, 3, 4, 5],
+								theadOrTbody: "header",
+							});
+
+							formatter.summaryColspan();
+						},
+					},
+					oTable
+				);
 			},
 
 			onConfirmationMessageBoxPress: function () {

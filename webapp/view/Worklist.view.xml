@@ -652,6 +652,150 @@
 						</table:Table>
 					</VBox>
 				</HBox>
+				<HBox class="sapUiResponsiveMargin" width="auto">
+					<VBox>
+						<Title level="H3" text="Grid Head 2열" />
+						<table:Table id="groupTable" width="100%" rows="{/hospitalCollection}" visibleRowCount="4" fixedBottomRowCount="1" ariaLabelledBy="title">
+							<table:columns>
+								<table:Column width="6%" hAlign="Center" filterProperty="Idx" sortProperty="Idx">
+									<table:multiLabels>
+										<Label text="No"/>
+										<Label text="No"/>
+									</table:multiLabels>
+									<table:template>
+										<Text text="{Idx}" wrapping="false" />
+									</table:template>
+								</table:Column>
+								<table:Column width="6%" hAlign="Center" filterProperty="Begda" sortProperty="Begda">
+									<table:multiLabels>
+										<Label text="진료시작일"/>
+										<Label text="진료시작일"/>
+									</table:multiLabels>
+									<table:template>
+										<Text text="{Begda}" wrapping="false" />
+									</table:template>
+								</table:Column>
+								<table:Column width="6%" hAlign="Center" filterProperty="Endda" sortProperty="Endda">
+									<table:multiLabels>
+										<Label text="진료종료일"/>
+										<Label text="진료종료일"/>
+									</table:multiLabels>
+									<table:template>
+										<Text text="{Endda}" wrapping="false" />
+									</table:template>
+								</table:Column>
+								<table:Column width="6%" hAlign="Center" filterProperty="Todo1" sortProperty="Todo1">
+									<table:multiLabels>
+										<Label text="병명"/>
+										<Label text="병명"/>
+									</table:multiLabels>
+									<table:template>
+										<Text text="{Todo1}" wrapping="false" />
+									</table:template>
+								</table:Column>
+								<table:Column width="6%" hAlign="Center" filterProperty="Todo2" sortProperty="Todo2">
+									<table:multiLabels>
+										<Label text="의료기관"/>
+										<Label text="의료기관"/>
+									</table:multiLabels>
+									<table:template>
+										<Text text="{Todo2}" wrapping="false" />
+									</table:template>
+								</table:Column>
+								<table:Column width="6%" hAlign="Center" filterProperty="Todo3" sortProperty="Todo3">
+									<table:multiLabels>
+										<Label text="영수증구분"/>
+										<Label text="영수증구분"/>
+									</table:multiLabels>
+									<table:template>
+										<Text text="{Todo3}" wrapping="false" />
+									</table:template>
+								</table:Column>
+								<table:Column width="6%" hAlign="Center" headerSpan="2" filterProperty="Todo4" sortProperty="Todo4">
+									<table:multiLabels>
+										<Label text="급여"/>
+										<Label text="본인부담금"/>
+									</table:multiLabels>
+									<table:template>
+										<Text text="{Todo4}" wrapping="false" width="100%" textAlign="End" />
+									</table:template>
+								</table:Column>
+								<table:Column width="6%" hAlign="Center" filterProperty="Todo5" sortProperty="Todo5">
+									<table:multiLabels>
+										<Label text="급여"/>
+										<Label text="전액&#13;&#10;본인부담금" wrapping="true" textAlign="Center"/>
+									</table:multiLabels>
+									<table:template>
+										<Text text="{Todo5}" wrapping="false" width="100%" textAlign="End" />
+									</table:template>
+								</table:Column>
+								<table:Column width="6%" hAlign="Center" headerSpan="6" filterProperty="Todo6" sortProperty="Todo6">
+									<table:multiLabels>
+										<Label text="비급여"/>
+										<Label text="입원료"/>
+									</table:multiLabels>
+									<table:template>
+										<Text text="{Todo6}" wrapping="false" width="100%" textAlign="End" />
+									</table:template>
+								</table:Column>
+								<table:Column width="6%" hAlign="Center" filterProperty="Todo7" sortProperty="Todo7">
+									<table:multiLabels>
+										<Label text="비급여"/>
+										<Label text="투약 및&#13;&#10;조제료" wrapping="true" textAlign="Center"/>
+									</table:multiLabels>
+									<table:template>
+										<Text text="{Todo7}" wrapping="false" width="100%" textAlign="End" />
+									</table:template>
+								</table:Column>
+								<table:Column width="6%" hAlign="Center" filterProperty="Todo8" sortProperty="Todo8">
+									<table:multiLabels>
+										<Label text="비급여"/>
+										<Label text="주사료"/>
+									</table:multiLabels>
+									<table:template>
+										<Text text="{Todo8}" wrapping="false" width="100%" textAlign="End" />
+									</table:template>
+								</table:Column>
+								<table:Column width="6%" hAlign="Center" filterProperty="Todo9" sortProperty="Todo9">
+									<table:multiLabels>
+										<Label text="비급여"/>
+										<Label text="치료&#13;&#10;재료대" wrapping="true" textAlign="Center"/>
+									</table:multiLabels>
+									<table:template>
+										<Text text="{Todo9}" wrapping="false" width="100%" textAlign="End" />
+									</table:template>
+								</table:Column>
+								<table:Column width="6%" hAlign="Center" filterProperty="Todo10" sortProperty="Todo10">
+									<table:multiLabels>
+										<Label text="비급여"/>
+										<Label text="전혈 및&#13;&#10;혈액성분료" wrapping="true" textAlign="Center"/>
+									</table:multiLabels>
+									<table:template>
+										<Text text="{Todo10}" wrapping="false" width="100%" textAlign="End" />
+									</table:template>
+								</table:Column>
+								<table:Column width="6%" hAlign="Center" filterProperty="Todo11" sortProperty="Todo11">
+									<table:multiLabels>
+										<Label text="비급여"/>
+										<Label text="CT / MRI /&#13;&#10;초음파" wrapping="true" textAlign="Center"/>
+									</table:multiLabels>
+									<table:template>
+										<Text text="{Todo11}" wrapping="false" width="100%" textAlign="End" />
+									</table:template>
+								</table:Column>
+								<table:Column width="6%" hAlign="Center" filterProperty="Todo12" sortProperty="Todo12">
+									<table:multiLabels>
+										<Label text="기타"/>
+										<Label text="회사지원"/>
+									</table:multiLabels>
+									<table:template>
+										<Text text="{Todo12}" wrapping="false" width="100%" textAlign="End" />
+									</table:template>
+								</table:Column>
+							</table:columns>
+						</table:Table>
+					</VBox>
+				</HBox>
 			</VBox>
 		</content>
 	</Page>
