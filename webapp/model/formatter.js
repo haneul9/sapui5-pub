@@ -58,13 +58,13 @@ sap.ui.define([], function () {
 			}
 		},
 
-		/*
-	@param o = {
-		table: sap.ui.table.Table instance
-		colIndices: rowspan을 적용할 column index array
-		theadOrTbody: "header" or "table"
-	}
-	*/
+		/**
+		 * @param {Object} o = {
+		 * 		table: sap.ui.table.Table instance
+		 * 		colIndices: rowspan을 적용할 column index array
+		 * 		theadOrTbody: "header" or "table"
+		 * 	}
+		 */
 		adjustRowSpan: function (o) {
 			$.each(o.colIndices || [], function (j, colIndex) {
 				var selector = `#${o.table.getId()}-${o.theadOrTbody} tbody>tr td:nth-child(${colIndex + 1}):visible`;

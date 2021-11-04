@@ -315,6 +315,7 @@ html.sap-desktop .sapMSwtCont:focus>.sapMSwt{outline-style:none !important;}
 /* DEVELOPER Temporary style */
 .hCardBox {border: 1px solid whitesmoke; border-radius: 10px; padding: 6px; box-shadow: 2px 2px 5px var(--BorderColorReadonly);}
 .vCardBox {margin: 16px 12px 0 12px; border: 1px solid whitesmoke; border-radius: 10px; padding: 6px; box-shadow: 2px 2px 5px var(--BorderColorReadonly);}
+.customBox {border: 1px solid whitesmoke; border-radius: 10px; padding: 6px; box-shadow: 2px 2px 5px var(--BorderColorReadonly);}
 
 .sapUiTableRowHighlight.sapUiTableRowHighlightIndication01 {background-color: var(--BorderColorReadonly) !important;}
 .sapUiTableRowHighlight.sapUiTableRowHighlightIndication02 {background-color: var(--BorderColorError) !important;}
@@ -330,4 +331,6 @@ html.sap-desktop .sapMSwtCont:focus>.sapMSwt{outline-style:none !important;}
 .sapMText[data-status="40"] {color: var(--BorderColorSuccess) !important;}
 .sapMText[data-status="45"] {color: var(--BorderColorError) !important;}
 .sapMText[data-status="60"] {color: var(--BorderColorFocus) !important;}
+
+.data-algin-center .sapUiTableCtrl tbody .sapUiTableCellInner {text-align: center;}
 /* -- DEVELOPER Temporary style */

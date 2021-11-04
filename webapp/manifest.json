@@ -117,6 +117,11 @@
 					"target": ["template1Detail"]
 				},
 				{
+					"pattern": "employee",
+					"name": "employee",
+					"target": ["employee"]
+				},
+				{
 					"pattern": "Products/{objectId}",
 					"name": "object",
 					"target": ["object"]
@@ -147,6 +152,12 @@
 					"viewId": "template1Detail",
 					"viewLevel": 1,
 					"title": "Template 1Detail"
+				},
+				"employee": {
+					"viewName": "Employee",
+					"viewId": "employee",
+					"viewLevel": 1,
+					"title": "Employee profile"
 				},
 				"object": {
 					"viewName": "Object",

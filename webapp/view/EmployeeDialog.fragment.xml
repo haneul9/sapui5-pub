@@ -1,7 +1,7 @@
 <core:FragmentDefinition xmlns="sap.m"
 	xmlns:table="sap.ui.table"
 	xmlns:core="sap.ui.core">
-	<Dialog id="employeeDialog" title="사원검색">
+	<Dialog id="employeeDialog" showHeader="false">
 		<buttons>
 			<Button type="Emphasized" text="저장"/>
 			<Button text="취소"/>
