@@ -5,7 +5,7 @@ sap.ui.define(
 		"../model/formatter",
 		"sap/ui/core/Fragment",
 		"sap/m/MessageToast",
-		"sap/ui/pub/control/MessageBox",
+		"sap/m/MessageBox",
 	],
 	function (BaseController, JSONModel, formatter, Fragment, MessageToast, MessageBox) {
 		"use strict";
@@ -283,15 +283,15 @@ sap.ui.define(
 			},
 
 			openModifyAddressDialog: function () {
-				MessageBox.warning("준비중입니다.");
+				MessageBox.warning("준비중입니다.", { title: "경고" });
 			},
 
 			onDeleteAddress: function () {
-				MessageBox.warning("준비중입니다.");
+				MessageBox.warning("준비중입니다.", { title: "경고" });
 			},
 
 			openSearchZipcodePopup: function () {
-				window.open("postcode.html?CBF=fn_SetAddr", "pop", "width=550,height=550, scrollbars=yes, resizable=yes");
+				window.open("postcodeFroBrowser.html?CBF=fn_SetAddr", "pop", "width=550,height=550, scrollbars=yes, resizable=yes");
 			},
 
 			onAddressDialogClose: function () {
