@@ -132,7 +132,7 @@
 					<VBox>
 						<Title level="H3" text="ComboBox and Select" />
 						<HBox>
-							<ComboBox items="{
+							<ComboBox class='sapIcon_Select_Arrow' items="{
 								path: '/ProductCollection',
 								sorter: {
 									path: 'text'
@@ -150,7 +150,7 @@
 								}">
 								<core:Item key="{ProductId}" text="{Name}" />
 							</Select>
-							<MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="350px" items="{
+							<MultiComboBox class='sapIcon_Select_Arrow' selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="350px" items="{
 									path: '/ProductCollection',
 									sorter: {
 										path: 'Name'
