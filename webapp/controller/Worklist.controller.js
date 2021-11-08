@@ -31,20 +31,22 @@ sap.ui.define(
 
 				const oTable = this.byId("groupTable");
 
-				oTable.addEventDelegate(
-					{
-						onAfterRendering: function () {
-							formatter.adjustRowSpan({
-								table: this,
-								colIndices: [0, 1, 2, 3, 4, 5],
-								theadOrTbody: "header",
-							});
+				if (oTable) {
+					oTable.addEventDelegate(
+						{
+							onAfterRendering: function () {
+								formatter.adjustRowSpan({
+									table: this,
+									colIndices: [0, 1, 2, 3, 4, 5],
+									theadOrTbody: "header",
+								});
 
-							formatter.summaryColspan();
+								formatter.summaryColspan();
+							},
 						},
-					},
-					oTable
-				);
+						oTable
+					);
+				}
 			},
 
 			onConfirmationMessageBoxPress: function () {
