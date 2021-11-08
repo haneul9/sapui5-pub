@@ -9,7 +9,7 @@
 			<VBox width="auto">
 				<HBox class="sapUiResponsiveMargin" width="auto">
 					<VBox>
-						<Title level="H3" text="Navigation" />
+						<Title level="H3" text="Navigation" class="component-title" />
 						<HBox>
 							<Breadcrumbs currentLocationText="신규신청" separatorStyle="GreaterThan">
 								<Link text="복리후생"/>
@@ -20,7 +20,7 @@
 				</HBox>
 				<HBox class="sapUiResponsiveMargin" width="auto">
 					<VBox width="100%">
-						<Title level="H3" text="Tab container" />
+						<Title level="H3" text="Tab container" class="component-title" />
 						<HBox>
 							<IconTabBar selectedKey="Attachments">
 								<layoutData>
@@ -46,7 +46,7 @@
 				</HBox>
 				<HBox class="sapUiResponsiveMargin" width="auto">
 					<VBox width="100%">
-						<Title level="H3" text="Panel" />
+						<Title level="H3" text="Panel" class="component-title" />
 						<HBox>
 							<Panel expandable="true" width="auto">
 								<layoutData>
@@ -68,7 +68,7 @@
 				</HBox>
 				<HBox class="sapUiResponsiveMargin" width="auto">
 					<VBox>
-						<Title level="H3" text="Dialog" />
+						<Title level="H3" text="Dialog" class="component-title" />
 						<HBox>
 							<Button text="사원검색" press=".openEmployeeDialog" />
 						</HBox>
@@ -76,7 +76,7 @@
 				</HBox>
 				<HBox class="sapUiResponsiveMargin" width="auto">
 					<VBox>
-						<Title level="H3" text="Label" />
+						<Title level="H3" text="Label" class="component-title" />
 						<HBox>
 							<Label text="Label A (required)" labelFor="input-a" />
 							<Input id="input-a" required="true" />
@@ -89,7 +89,7 @@
 				</HBox>
 				<HBox class="sapUiResponsiveMargin" width="auto">
 					<VBox>
-						<Title level="H3" text="Input" />
+						<Title level="H3" text="Input" class="component-title" />
 						<HBox>
 							<Input id="nameInput" placeholder="이름을 입력하세요." valueStateText="Name must not be empty. Maximum 10 characters." value="{
 									path: '/name',
@@ -114,7 +114,7 @@
 				</HBox>
 				<HBox class="sapUiResponsiveMargin" width="auto">
 					<VBox>
-						<Title level="H3" text="Search Input" />
+						<Title level="H3" text="Search Input" class="component-title" />
 						<HBox>
 							<SearchField width="100%" placeholder="검색어를 입력하세요." />
 						</HBox>
@@ -122,7 +122,7 @@
 				</HBox>
 				<HBox class="sapUiResponsiveMargin" width="auto">
 					<VBox>
-						<Title level="H3" text="TextArea" />
+						<Title level="H3" text="TextArea" class="component-title" />
 						<HBox>
 							<TextArea value="Lorem ipsum dolor st amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat" rows="5" width="500px" />
 						</HBox>
@@ -130,7 +130,7 @@
 				</HBox>
 				<HBox class="sapUiResponsiveMargin" width="auto">
 					<VBox>
-						<Title level="H3" text="ComboBox and Select" />
+						<Title level="H3" text="ComboBox and Select" class="component-title" />
 						<HBox>
 							<ComboBox items="{
 								path: '/ProductCollection',
@@ -164,7 +164,7 @@
 				</HBox>
 				<HBox class="sapUiResponsiveMargin" width="auto">
 					<VBox>
-						<Title level="H3" text="Radio Button" />
+						<Title level="H3" text="Radio Button" class="component-title" />
 						<HBox>
 							<RadioButtonGroup id="rbg1" width="100%" columns="6" class="sapUiMediumMarginBottom">
 								<pub:RadioButton id="RB1-1" text="Long Option Number 1" outerSize="50%" innerSize="35%" />
@@ -179,7 +179,7 @@
 				</HBox>
 				<HBox class="sapUiResponsiveMargin" width="auto">
 					<VBox>
-						<Title level="H3" text="CheckBox" />
+						<Title level="H3" text="CheckBox" class="component-title" />
 						<HBox>
 							<CheckBox text="Option a" selected="true" />
 							<CheckBox text="Option b"/>
@@ -199,7 +199,7 @@
 				</HBox>
 				<HBox class="sapUiResponsiveMargin" width="auto">
 					<VBox>
-						<Title level="H3" text="Date and Time Picker " />
+						<Title level="H3" text="Date and Time Picker" class="component-title" />
 						<HBox>
 							<DatePicker id="DP1" placeholder="Enter Date" class="sapUiSmallMarginBottom sapIcon_Date" />
 							<DateRangeSelection id="DRS2" class="sapIcon_Date" />
@@ -209,7 +209,7 @@
 				</HBox>
 				<HBox class="sapUiResponsiveMargin" width="auto">
 					<VBox>
-						<Title level="H3" text="Switch" />
+						<Title level="H3" text="Switch" class="component-title" />
 						<HBox>
 							<Switch state="true">
 								<layoutData>
@@ -246,7 +246,7 @@
 				</HBox>
 				<HBox class="sapUiResponsiveMargin" width="auto">
 					<VBox>
-						<Title level="H3" text="Button" />
+						<Title level="H3" text="Button" class="component-title" />
 						<HBox>
 							<Button text="Default" ariaDescribedBy="defaultButtonDescription genericButtonDescription">
 								<layoutData>
@@ -277,7 +277,7 @@
 				</HBox>
 				<HBox class="sapUiResponsiveMargin" width="auto">
 					<VBox>
-						<Title level="H3" text="Segmented Button" />
+						<Title level="H3" text="Segmented Button" class="component-title" />
 						<HBox>
 							<SegmentedButton width="200px" selectedKey="10">
 								<items>
@@ -291,7 +291,7 @@
 				</HBox>
 				<HBox class="sapUiResponsiveMargin" width="auto">
 					<VBox>
-						<Title level="H3" text="Message Box" />
+						<Title level="H3" text="Message Box" class="component-title" />
 						<HBox>
 							<Button text="Confirm" press=".onConfirmationMessageBoxPress" />
 							<Button text="Alert" press=".onAlertMessageBoxPress" />
@@ -304,7 +304,7 @@
 				</HBox>
 				<HBox class="sapUiResponsiveMargin" width="auto">
 					<VBox>
-						<Title level="H3" text="Message Strip" />
+						<Title level="H3" text="Message Strip" class="component-title" />
 						<HBox>
 							<MessageStrip text="Default (Information) with default icon and close button:" showIcon="true" showCloseButton="true" class="sapUiMediumMarginBottom" />
 							<MessageStrip text="Error with default icon and close button:" type="Error" showIcon="true" showCloseButton="true" class="sapUiMediumMarginBottom" />
@@ -326,7 +326,7 @@
 				</HBox>
 				<HBox class="sapUiResponsiveMargin" width="auto">
 					<VBox>
-						<Title level="H3" text="Progress Indicator" />
+						<Title level="H3" text="Progress Indicator" class="component-title" />
 						<HBox>
 							<ProgressIndicator class="sapUiSmallMarginBottom" percentValue="30" displayValue="30%" showValue="true" state="None" width="200px" />
 							<ProgressIndicator class="sapUiSmallMarginBottom" percentValue="50" showValue="false" state="Error" width="200px" />
@@ -340,7 +340,7 @@
 				</HBox>
 				<HBox class="sapUiResponsiveMargin" width="auto">
 					<VBox>
-						<Title level="H3" text="Table" />
+						<Title level="H3" text="Table" class="component-title" />
 						<table:Table width="90%" rows="{/ProductCollection}" selectionMode="MultiToggle" visibleRowCount="7" ariaLabelledBy="title">
 							<table:extension>
 								<OverflowToolbar style="Clear">
@@ -460,7 +460,7 @@
 				</HBox>
 				<HBox class="sapUiResponsiveMargin" width="auto">
 					<VBox>
-						<Title level="H3" text="Table fixed column" />
+						<Title level="H3" text="Table fixed column" class="component-title" />
 						<table:Table width="90%" rows="{/ProductCollection}" selectionMode="MultiToggle" visibleRowCount="7" ariaLabelledBy="title" fixedColumnCount="2">
 							<table:extension>
 								<OverflowToolbar style="Clear">
@@ -580,7 +580,7 @@
 				</HBox>
 				<HBox class="sapUiResponsiveMargin" width="auto">
 					<VBox>
-						<Title level="H3" text="Table no data" />
+						<Title level="H3" text="Table no data" class="component-title" />
 						<table:Table rows="{/ProductCollection2}" visibleRowCount="1" ariaLabelledBy="title">
 							<table:extension>
 								<OverflowToolbar style="Clear">
@@ -654,7 +654,7 @@
 				</HBox>
 				<HBox class="sapUiResponsiveMargin" width="auto">
 					<VBox>
-						<Title level="H3" text="Grid Head 2열" />
+						<Title level="H3" text="Grid Head 2열" class="component-title" />
 						<table:Table id="groupTable" width="100%" rows="{/hospitalCollection}" visibleRowCount="4" fixedBottomRowCount="1" ariaLabelledBy="title">
 							<table:columns>
 								<table:Column width="6%" hAlign="Center" filterProperty="Idx" sortProperty="Idx">
