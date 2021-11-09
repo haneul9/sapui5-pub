@@ -279,6 +279,28 @@
 				</HBox>
 				<HBox class="sapUiResponsiveMargin" width="auto">
 					<VBox>
+						<Title level="H3" text="Toggle Button" class="component-title" />
+						<HBox>
+							<ToggleButton text="Pressed" enabled="true" pressed="true">
+								<layoutData>
+									<FlexItemData growFactor="1" />
+								</layoutData>
+							</ToggleButton>
+							<ToggleButton text="Disabled" enabled="false">
+								<layoutData>
+									<FlexItemData growFactor="1" />
+								</layoutData>
+							</ToggleButton>
+							<ToggleButton icon="sap-icon://action" enabled="true">
+								<layoutData>
+									<FlexItemData growFactor="1" />
+								</layoutData>
+							</ToggleButton>
+						</HBox>
+					</VBox>
+				</HBox>
+				<HBox class="sapUiResponsiveMargin" width="auto">
+					<VBox>
 						<Title level="H3" text="Segmented Button" class="component-title" />
 						<HBox>
 							<SegmentedButton width="420px" selectedKey="10">
