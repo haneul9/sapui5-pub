@@ -99,18 +99,18 @@
 										maxLength: 10
 									}
 								}"  width='250px'/>
-							<Input id="productInput" width='250px' placeholder="Enter product" showSuggestion="true" showValueHelp="true" valueHelpRequest=".onValueHelpRequest" suggestionItems="{/ProductCollection}" class="sapIcon_Search">
+							<Input id="productInput" width='180px' placeholder="Enter product" showSuggestion="true" showValueHelp="true" valueHelpRequest=".onValueHelpRequest" suggestionItems="{/ProductCollection}" class="sapIcon_Search">
 								<core:Item text="{Name}"/>
 							</Input>
 							<Input value="10" description="명" textAlign='right'/>
 						</HBox>
 						<HBox>
-							<Input id="InputNoEdit" width='250px' value="No edit" type="Text" placeholder="Product" enabled="true" editable="false" />
-							<Input id="InputDisabled" width='250px' value="Disabled" type="Text" placeholder="Product" enabled="false" />
-							<Input valueState="Success" width='250px' value="Value state Success" />
-							<Input valueState="Warning" width='250px' valueStateText="Warning message. Extra long text used as a warning message. Extra long text used as a warning message - 2. Extra long text used as a warning message - 3. Extra long text used as a warning message - 4. Extra long text used as a warning message - 5." value="Value state Warning." />
-							<Input valueState="Error" width='250px' value="Value state Error" />
-							<Input valueState="Information" width='250px' value="Value state Information" />
+							<Input id="InputNoEdit" width='180px' value="No edit" type="Text" placeholder="Product" enabled="true" editable="false" />
+							<Input id="InputDisabled" width='180px' value="Disabled" type="Text" placeholder="Product" enabled="false" />
+							<Input valueState="Success" width='200px' value="Value state Success" />
+							<Input valueState="Warning" width='200px' valueStateText="Warning message. Extra long text used as a warning message. Extra long text used as a warning message - 2. Extra long text used as a warning message - 3. Extra long text used as a warning message - 4. Extra long text used as a warning message - 5." value="Value state Warning." />
+							<Input valueState="Error" width='200px' value="Value state Error" />
+							<Input valueState="Information" width='200px' value="Value state Information" />
 						</HBox>
 					</VBox>
 				</HBox>
