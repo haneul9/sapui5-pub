@@ -1062,58 +1062,6 @@ html.sap-desktop .sapMSwtCont:focus > .sapMSwt {
   color: #fe5f58 !important;
 }
 
-.sapUiTableRowHighlight.sapUiTableRowHighlightNone {
-  background-color: var(--BorderColorReadonly) !important;
-}
-.sapUiTableRowHighlight.sapUiTableRowHighlightIndication02 {
-  background-color: var(--BorderColorError) !important;
-}
-.sapUiTableRowHighlight.sapUiTableRowHighlightIndication03 {
-  background-color: var(--BorderColorWarning) !important;
-}
-.sapUiTableRowHighlight.sapUiTableRowHighlightIndication04 {
-  background-color: var(--BorderColorSuccess) !important;
-}
-.sapUiTableRowHighlight.sapUiTableRowHighlightIndication05 {
-  background-color: var(--BorderColorFocus) !important;
-}
-
-.sapMObjStatus.sapMObjStatusNone > .sapMObjStatusText {
-  color: var(--BorderColorReadonly) !important;
-}
-.sapMObjStatus.sapMObjStatusIndication03 > .sapMObjStatusText {
-  color: var(--BorderColorWarning) !important;
-}
-.sapMObjStatus.sapMObjStatusIndication04 > .sapMObjStatusText {
-  color: var(--BorderColorSuccess) !important;
-}
-.sapMObjStatus.sapMObjStatusIndication01 > .sapMObjStatusText {
-  color: var(--BorderColorFocus) !important;
-}
-.sapMObjStatus.sapMObjStatusIndication02 > .sapMObjStatusText {
-  color: var(--BorderColorError) !important;
-}
-.sapMObjStatus.sapMObjStatusIndication05 > .sapMObjStatusText {
-  color: var(--BackgroundColorFocus) !important;
-}
-
-.sapUiSizeCompact .sapMBtnContent {
-  line-height: 40px;
-}
-.sapUiSizeCompact .sapMBtnInner {
-  height: 40px;
-}
-
-.sapMLabel.sapUiSelectable.sapUiLayoutCSSGridItem {
-  height: 40px;
-}
-.sapUiLayoutCSSGridItem.sapUiSelectable.sapMText {
-  font-size: 13px !important;
-}
-.sapUiLayoutCSSGridItem.sapMInputBaseInner {
-  font-size: 13px !important;
-}
-
 .sapMText[data-status="10"] {
   color: var(--BorderColorReadonly) !important;
 }
