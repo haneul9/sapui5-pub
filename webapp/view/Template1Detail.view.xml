@@ -21,15 +21,12 @@
 					<Button type="Transparent" icon="sap-icon://sys-help" text="도움말" />
 				</HBox>
 			</HBox>
-			<HBox class="vCardBox" justifyContent="SpaceBetween">
-				<HBox>
-					<Image src="https://i1.wp.com/jejuhydrofarms.com/wp-content/uploads/2020/05/blank-profile-picture-973460_1280.png?ssl=1" height="35px" width="35px" />
-					<Text text="홍길동"/>
-					<Text text="부장/팀장"/>
-					<Text text="예스코홀딩스 인사기획팀"/>
-					<Text text="경영관리직/12345"/>
-				</HBox>
-				<Button type="Transparent" icon="sap-icon://employee-approvals" />
+			<HBox class="vCardBox">
+				<Image src="https://i1.wp.com/jejuhydrofarms.com/wp-content/uploads/2020/05/blank-profile-picture-973460_1280.png?ssl=1" height="35px" width="35px" />
+				<Text text="홍길동"/>
+				<Text text="부장/팀장"/>
+				<Text text="예스코홀딩스 인사기획팀"/>
+				<Text text="경영관리직/12345"/>
 			</HBox>
 			<HBox class="vCardBox" justifyContent="SpaceBetween">
 				<HBox>

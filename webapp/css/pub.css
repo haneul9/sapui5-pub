@@ -364,6 +364,7 @@ button .sapMBtnTransparent{border-radius: 1rem;}
 .sapUiSizeCompact .sapMBtnInner.sapMBtnText{padding-left: 0;padding-right: 0;border-radius: 20px;height: 40px;}
 .sapUiSizeCompact .sapMBtnContent{line-height: 40px;}
 .sapUiSizeCompact .sapMBtnInner{height: 40px;}
+.sapMLabel.sapUiSelectable.sapUiLayoutCSSGridItem {height: 40px;}
 
 .sapMSegB .sapMSegBBtn .sapMSegBBtnInner{background-color: #f8f8f8;border-radius: 0px;border:0;color:var(--FontColorNormal);height: 40px;line-height: 40px;font-size: 15px;font-weight: bold;}
 .sapMSegB .sapMSegBBtn.sapMSegBBtnSel .sapMSegBBtnInner{background-color: #99caff;border:0;color:#003876;border-radius: 4px;}
@@ -375,7 +376,7 @@ button .sapMBtnTransparent{border-radius: 1rem;}
 .sapUiTableRowFirstFixedBottom {background-color:#f3f3f3 !important;}
 .sapUiTableRowFirstFixedBottom>div {display:block !important;opacity:0;}
 .sapUiTableCell{border-right: 1px solid #f3f3f3 !important;}
-.sapUiTableCell.sapUiTableHeaderCell{border-bottom: 1px solid #f3f3f3 !important;height: 50px;padding: 0;}
+.sapUiTableCell.sapUiTableHeaderCell{border-bottom: 0.0625rem solid #f3f3f3 !important;}
 .sapUiTableCtrlScroll tbody tr:nth-child(2){border-bottom:none;height:50px !important;}
 .sapUiTableCtrlEmpty{font-size: 15px;font-weight: 300;color: #b4babf;}
 .sapUiTableRowSelectors:not(.sapUiTableRowHighlights) .sapUiTableRowSelectionHeaderCell{height:100%;}

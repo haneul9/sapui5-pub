@@ -50,7 +50,7 @@
 					</HBox>
 					<HBox>
 						<Text text="향후 예상되는 경조사는"/>
-						<ObjectStatus text="2021.12.31 부친 회갑" state="Indication05" />
+						<ObjectStatus text="2021.12.31 부친 회갑" state="Indication01" />
 						<Text text="입니다."/>
 					</HBox>
 				</VBox>
@@ -62,16 +62,6 @@
 					<grid:CSSGrid gridTemplateColumns="1fr 3fr" gridGap="8px">
 						<Label text="신청일" design="Bold" />
 						<DateRangeSelection width="90%" class="sapIcon_Date" />
-						<Label text="진행상태" design="Bold" labelFor="secondCondition" />
-						<Select width="90%" items="{
-								path: '/ProductCollection',
-								sorter: {
-									path: 'text'
-								},
-								templateShareable: true
-							}">
-							<core:Item key="{ProductId}" text="{Name}" />
-						</Select>
 					</grid:CSSGrid>
 				</VBox>
 			</HBox>
@@ -165,7 +155,7 @@
 						<table:Column>
 							<Label text="증빙"/>
 							<table:template>
-								<Button type="Transparent" icon="sap-icon://edit" />
+								<Button type="Transparent" icon="sap-icon://attachment" />
 							</table:template>
 						</table:Column>
 					</table:columns>
