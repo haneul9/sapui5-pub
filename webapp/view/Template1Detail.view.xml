@@ -40,7 +40,10 @@
 			</HBox>
 			<VBox class="vCardBox">
 				<HBox>
-					<Title level="H2" text="신청내역" />
+					<Title 
+					level="H2" 
+					text="신청내역" 
+					/>
 					<Text text="경조사유별 대상자 중복(성명/생년월일 비교)
 						시 신청불가"/>
 				</HBox>
@@ -62,11 +65,11 @@
 						<core:Item text="{Ztext}" key="{Zcode}" />
 					</Select>
 					<Label text="행사장소"/>
-					<Input value="워커힐 그랜드 볼룸" width="250px" valueState="Warning" />
+					<Input value="워커힐 그랜드 볼룸" class="LongInputBase" valueState="Warning" />
 					<Label text="대상자 성명"/>
 					<HBox>
-						<Input value="{/FormData/Zname}" width="250px" valueState="Warning" showValueHelp="true" class="sapIcon_Search" />
-						<Button id="RelationBtn" text="선택"/>
+						<Input value="{/FormData/Zname}" valueState="Warning" class="SmallInput" />
+						<Button id="RelationBtn" class="InputinnerButton" text="선택"/>
 					</HBox>
 					<HBox ></HBox>
 					<HBox ></HBox>
