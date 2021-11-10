@@ -78,6 +78,7 @@
 		"resources": {
 			"css": [
 				{ "uri": "css/webfonts/pretendard-subset.css" },
+				{ "uri": "css/temp.css" },
 				{ "uri": "css/pub.css" }
 			]
 		  },
@@ -98,7 +99,12 @@
 			"routes": [
 				{
 					"pattern": "",
-					"name": "worklist",
+					"name": "navigation",
+					"target": ["navigation"]
+				},
+				{
+					"pattern": "components",
+					"name": "components",
 					"target": ["worklist"]
 				},
 				{
@@ -129,6 +135,12 @@
 			],
 
 			"targets": {
+				"navigation": {
+					"viewName": "Navigation",
+					"viewId": "navigation",
+					"viewLevel": 1,
+					"title": "Menu navigation"
+				},
 				"worklist": {
 					"viewName": "Worklist",
 					"viewId": "worklist",

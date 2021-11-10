@@ -1,0 +1,18 @@
+<mvc:View controllerName="pub.pubsample.controller.Navigation"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt" height="100%" busyIndicatorDelay="0" class="side-navigation">
+    <tnt:SideNavigation id="sideNavigation" selectedKey="components">
+        <tnt:NavigationList>
+            <tnt:NavigationListItem text="공통" icon="sap-icon://employee">
+                <tnt:NavigationListItem text="Components" select='.onPressItem' key='components' />
+                <tnt:NavigationListItem text="Layout" select='.onPressItem' key='layout' />
+            </tnt:NavigationListItem>
+            <tnt:NavigationListItem text="Pattern Template" icon="sap-icon://building">
+                <tnt:NavigationListItem text="경조금 overview" select='.onPressItem' key='template1' />
+                <tnt:NavigationListItem text="경조금 신청 및 상세" select='.onPressItem' key='template1Detail' />
+                <tnt:NavigationListItem text="사원프로파일" select='.onPressItem' key='employee' />
+            </tnt:NavigationListItem>
+        </tnt:NavigationList>
+    </tnt:SideNavigation>
+</mvc:View>
