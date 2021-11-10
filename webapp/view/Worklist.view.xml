@@ -70,7 +70,7 @@
 					<VBox>
 						<Title level="H3" text="Dialog" class="component-title" />
 						<HBox>
-							<Button text="사원검색" press=".openEmployeeDialog" />
+							<Button width='117px' text="사원검색" press=".openEmployeeDialog" />
 						</HBox>
 					</VBox>
 				</HBox>
@@ -250,30 +250,30 @@
 					<VBox>
 						<Title level="H3" text="Button" class="component-title" />
 						<HBox>
-							<Button text="Default" ariaDescribedBy="defaultButtonDescription genericButtonDescription">
+							<Button width='117px' text="Default" ariaDescribedBy="defaultButtonDescription genericButtonDescription">
 								<layoutData>
 									<FlexItemData growFactor="1"/>
 								</layoutData>
 							</Button>
-							<Button type="Accept" text="Accept" ariaDescribedBy="acceptButtonDescription genericButtonDescription">
+							<Button width='117px' type="Accept" text="Accept" ariaDescribedBy="acceptButtonDescription genericButtonDescription">
 								<layoutData>
 									<FlexItemData growFactor="1"/>
 								</layoutData>
 							</Button>
-							<Button type="Reject" text="Reject" ariaDescribedBy="rejectButtonDescription genericButtonDescription">
+							<Button width='117px' type="Reject" text="Reject" ariaDescribedBy="rejectButtonDescription genericButtonDescription">
 								<layoutData>
 									<FlexItemData growFactor="1"/>
 								</layoutData>
 							</Button>
-							<Button text="Coming Soon" ariaDescribedBy="comingSoonButtonDescription genericButtonDescription" enabled="false">
+							<Button width='117px' text="Coming Soon" ariaDescribedBy="comingSoonButtonDescription genericButtonDescription" enabled="false">
 								<layoutData>
 									<FlexItemData growFactor="1"/>
 								</layoutData>
 							</Button>
-							<Button type="Emphasized" text="Emphasized" />
-							<Button text="Default"/>
-							<Button text="Transparent" type="Transparent" />
-							<Button icon="sap-icon://action" type="Transparent" text="With Icon" />
+							<Button width='117px' type="Emphasized" text="Emphasized" />
+							<Button width='117px' text="Default"/>
+							<Button width='117px' text="Transparent" type="Transparent" />
+							<Button width='117px' icon="sap-icon://action" type="Transparent" text="With Icon" />
 						</HBox>
 					</VBox>
 				</HBox>
@@ -281,17 +281,17 @@
 					<VBox>
 						<Title level="H3" text="Toggle Button" class="component-title" />
 						<HBox>
-							<ToggleButton text="Pressed" enabled="true" pressed="true">
+							<ToggleButton width='117px' class='toggle_edit' text="Pressed" enabled="true" pressed="true">
 								<layoutData>
 									<FlexItemData growFactor="1" />
 								</layoutData>
 							</ToggleButton>
-							<ToggleButton text="Disabled" enabled="false">
+							<ToggleButton width='117px' class='toggle_edit' text="Disabled" enabled="false">
 								<layoutData>
 									<FlexItemData growFactor="1" />
 								</layoutData>
 							</ToggleButton>
-							<ToggleButton icon="sap-icon://action" enabled="true">
+							<ToggleButton width='60px' class='toggle_edit' icon="sap-icon://action" enabled="true">
 								<layoutData>
 									<FlexItemData growFactor="1" />
 								</layoutData>
@@ -317,12 +317,12 @@
 					<VBox>
 						<Title level="H3" text="Message Box" class="component-title" />
 						<HBox>
-							<Button text="Confirm" press=".onConfirmationMessageBoxPress" />
-							<Button text="Alert" press=".onAlertMessageBoxPress" />
-							<Button text="Error" press=".onErrorMessageBoxPress" />
-							<Button text="Info" press=".onInfoMessageBoxPress" />
-							<Button text="Warning" press=".onWarningMessageBoxPress" />
-							<Button text="Success" press=".onSuccessMessageBoxPress" />
+							<Button width='117px' text="Confirm" press=".onConfirmationMessageBoxPress" />
+							<Button width='117px' text="Alert" press=".onAlertMessageBoxPress" />
+							<Button width='117px' text="Error" press=".onErrorMessageBoxPress" />
+							<Button width='117px' text="Info" press=".onInfoMessageBoxPress" />
+							<Button width='117px' text="Warning" press=".onWarningMessageBoxPress" />
+							<Button width='117px' text="Success" press=".onSuccessMessageBoxPress" />
 						</HBox>
 					</VBox>
 				</HBox>
