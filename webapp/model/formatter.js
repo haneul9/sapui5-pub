@@ -18,7 +18,7 @@ sap.ui.define([], function () {
 		rowHighlight: function (sValue) {
 			switch (sValue) {
 				case "10":
-					return sap.ui.core.IndicationColor.None;
+					return sap.ui.core.IndicationColor.Indication01;
 				case "20":
 					return sap.ui.core.IndicationColor.Indication03;
 				case "40":

@@ -155,7 +155,7 @@
 						<table:Column>
 							<Label text="증빙"/>
 							<table:template>
-								<Button type="Transparent" icon="sap-icon://attachment" />
+								<Button press='.onFileListDialog' type="Transparent" icon="sap-icon://attachment" />
 							</table:template>
 						</table:Column>
 					</table:columns>

@@ -66,7 +66,7 @@
 					<Label text="대상자 성명"/>
 					<HBox>
 						<Input value="{/FormData/Zname}" valueState="Warning" class="SmallInput" />
-						<Button id="RelationBtn" class="InputinnerButton" text="선택"/>
+						<Button id="RelationBtn" press= '.onDialog' class="InputinnerButton" text="선택"/>
 					</HBox>
 					<HBox ></HBox>
 					<HBox ></HBox>

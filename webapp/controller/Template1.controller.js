@@ -130,6 +130,27 @@ sap.ui.define(
 
 				MessageToast.show(fnLogChangedItems());
 			},
+			
+			onCloseClick() {
+				this.byId('listFileDialog').close();
+			},
+
+			onFileListDialog() {
+				if (!this.byId('listFileDialog')) {
+					Fragment.load({
+					  id: this.getView().getId(),
+					  name: 'pub.pubsample.view.ListFileDialog',
+					  controller: this,
+					}).then((oDialog) => {
+					  // connect dialog to the root view of this component (models, lifecycle)
+					  this.getView().addDependent(oDialog);
+					  oDialog.addStyleClass(this.getOwnerComponent().getContentDensityClass());
+					  oDialog.open();
+					});
+				} else {
+					this.byId('listFileDialog').open();
+				}
+			},
 
 			handleSelectionFinish: function (oEvent) {
 				var selectedItems = oEvent.getParameter("selectedItems");
