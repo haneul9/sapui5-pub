@@ -652,7 +652,7 @@
 										<Text text="{Endda}" wrapping="false" />
 									</table:template>
 								</table:Column>
-								<table:Column width="110px" hAlign="Center" filterProperty="Todo1" sortProperty="Todo1">
+								<table:Column width="110px" hAlign="Start" filterProperty="Todo1" sortProperty="Todo1">
 									<table:multiLabels>
 										<Label text="병명"/>
 										<Label text="병명"/>
@@ -670,7 +670,7 @@
 										<Text text="{Todo2}" wrapping="false" />
 									</table:template>
 								</table:Column>
-								<table:Column width="100px" hAlign="Center" filterProperty="Todo3" sortProperty="Todo3">
+								<table:Column width="100px" hAlign="Start" filterProperty="Todo3" sortProperty="Todo3">
 									<table:multiLabels>
 										<Label text="영수증구분"/>
 										<Label text="영수증구분"/>

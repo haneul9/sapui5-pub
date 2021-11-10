@@ -295,10 +295,12 @@ html.sap-desktop .sapMSwtCont:focus>.sapMSwt{outline-style:none !important;}
 .sapMMsgStripCloseButton .sapMBtnIcon{font-size:0.7rem;line-height:1.2rem;}
 
 /* 공통 Table */
+.sapUiTableSelectAllCheckBox::after{top: 14px !important;}
 .sapUiTableCnt{border:none !important;border-top: solid 1px #f3f3f3 !important;} /* table top */
-.sapUiTableColHdrCnt{border-bottom:1px solid #dbe0e9 !important;background:#fbfcfd !important;} /* table header */
+.sapUiTableColHdrCnt{border-bottom:0 !important;background:#fbfcfd !important;} /* table header */
+.sapUiTableCCnt{border-bottom:0 !important;}
 .sapUiTableHeaderRow{background:#fbfcfd !important;} /* table header */
-.sapUiTableHeaderDataCell>.sapUiTableCellInner>div:first-child{display:block !important;text-align:center !important;}
+.sapUiTableHeaderDataCell>.sapUiTableCellInner>div:first-child{display:block !important;text-align:center !important;line-height: 1;margin-top: 6px;}
 .sapUiTableHeaderDataCell>.sapUiTableCellInner>div:first-child>*{color:#343a40 !important;font-weight:500;font-size: 15px;}
 .sapUiTableSelectAllCheckBox::after{bottom:calc(( 2rem - 0.7rem ) / 2) !important;} /* table header checkd style */
 .sapMLnk{color:#007bff !important;}
@@ -317,17 +319,11 @@ html.sap-desktop .sapMSwtCont:focus>.sapMSwt{outline-style:none !important;}
 .vCardBox {margin: 16px 12px 0 12px; border: 1px solid whitesmoke; border-radius: 10px; padding: 6px; box-shadow: 2px 2px 5px var(--BorderColorReadonly);}
 
 .sapUiTableRowHighlight.sapUiTableRowHighlightNone {background-color: var(--BorderColorReadonly) !important;}
+.sapUiTableRowHighlight.sapUiTableRowHighlightIndication01 {background-color: var(--BorderColorReadonly) !important;}
 .sapUiTableRowHighlight.sapUiTableRowHighlightIndication02 {background-color: var(--BorderColorError) !important;}
 .sapUiTableRowHighlight.sapUiTableRowHighlightIndication03 {background-color: var(--BorderColorWarning) !important;}
 .sapUiTableRowHighlight.sapUiTableRowHighlightIndication04 {background-color: var(--BorderColorSuccess) !important;}
 .sapUiTableRowHighlight.sapUiTableRowHighlightIndication05 {background-color: var(--BorderColorFocus) !important;}
-
-.sapMObjStatus.sapMObjStatusNone > .sapMObjStatusText {color: var(--BorderColorReadonly) !important;}
-.sapMObjStatus.sapMObjStatusIndication03 > .sapMObjStatusText {color: var(--BorderColorWarning) !important;}
-.sapMObjStatus.sapMObjStatusIndication04 > .sapMObjStatusText {color: var(--BorderColorSuccess) !important;}
-.sapMObjStatus.sapMObjStatusIndication01 > .sapMObjStatusText {color: var(--BorderColorFocus) !important;}
-.sapMObjStatus.sapMObjStatusIndication02 > .sapMObjStatusText {color: var(--BorderColorError) !important;}
-.sapMObjStatus.sapMObjStatusIndication05 > .sapMObjStatusText {color: var(--BackgroundColorFocus) !important;}
 
 /*.sapMObjStatus.sapMObjStatusIndication02>.sapMObjStatusText {color:var(--BorderColorError) !important;}
 .sapMObjStatus.sapMObjStatusIndication05>.sapMObjStatusText {color:var(--BackgroundColorFocus) !important;}*/
@@ -373,10 +369,10 @@ button .sapMBtnTransparent{border-radius: 1rem;}
 .sapUiTableCtrlRowFixedBottom .sapUiTableContentRow{background-color:#eff3f8 !important;}
 .sapUiTableCtrlRowFixedBottom .sapUiTableContentRow .sapUiTableCell{border-right:none !important;} /* table Cell */
 .sapUiTableCtrlRowFixedBottom .sapUiTableContentRow .sapUiTableCell .sapUiTableCellInner{font-weight: 700;}
-.sapUiTableRowFirstFixedBottom {background-color:#f3f3f3 !important;}
+.sapUiTableRowFirstFixedBottom {background-color:#eff3f8 !important;}
 .sapUiTableRowFirstFixedBottom>div {display:block !important;opacity:0;}
-.sapUiTableCell{border-right: 1px solid #f3f3f3 !important;}
-.sapUiTableCell.sapUiTableHeaderCell{border-bottom: 0.0625rem solid #f3f3f3 !important;}
+.sapUiTableCell{border-right: 1px solid #f3f3f3 !important;border-bottom: 1px solid #f3f3f3 !important;}
+.sapUiTableCell.sapUiTableHeaderCell{border-bottom: 1px solid #f3f3f3 !important;height: 50px;padding: 0;}
 .sapUiTableCtrlScroll tbody tr:nth-child(2){border-bottom:none;height:50px !important;}
 .sapUiTableCtrlEmpty{font-size: 15px;font-weight: 300;color: #b4babf;}
 .sapUiTableRowSelectors:not(.sapUiTableRowHighlights) .sapUiTableRowSelectionHeaderCell{height:100%;}
