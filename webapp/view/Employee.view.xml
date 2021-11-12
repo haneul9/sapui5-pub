@@ -117,16 +117,42 @@
                             <HBox justifyContent="SpaceBetween">
                                 <Title level="H2" text="추가정보"/>
                             </HBox>
-                            <grid:CSSGrid items="{path: '/employee/base/extinfo1'}" gridTemplateColumns="1fr 3fr 1fr 3fr" gridGap="8px">
-                                <Label text="{data}"/>
+                            <grid:CSSGrid gridTemplateColumns="1fr 3fr 1fr 3fr" gridGap="2px">
+                                <Label text="성명(영어)"/>
+                                <Text text="GILSOON HONG"/>
+                                <Label text="성명(한자)"/>
+                                <Text text="洪吉順"/>
+                                <Label text="노조가입여부"/>
+                                <Text text="비조합원"/>
+                                <Label text="노조직책"/>
+                                <Text text=""/>
+                                <Label text="최종학력"/>
+                                <Text text="대학교 졸업"/>
+                                <Label text="입사시학력"/>
+                                <Text text="대학교 졸업"/>
+                                <Label text="퇴직일"/>
+                                <Text text=""/>
+                                <Label text="퇴직사유"/>
+                                <Text text=""/>
                             </grid:CSSGrid>
                         </VBox>
                         <VBox class="customBox">
                             <HBox justifyContent="SpaceBetween">
                                 <Title level="H2" text="신상"/>
                             </HBox>
-                            <grid:CSSGrid items="{path: '/employee/base/extinfo2'}" gridTemplateColumns="1fr 3fr 1fr 3fr" gridGap="8px">
-                                <Label text="{data}"/>
+                            <grid:CSSGrid gridTemplateColumns="1fr 3fr 1fr 3fr" gridGap="2px">
+                                <Label text="실제생일"/>
+                                <Text text="1990.01.01"/>
+                                <Label text="음력/양력"/>
+                                <Text text="양력"/>
+                                <Label text="결혼여부"/>
+                                <Text text="기혼"/>
+                                <Label text="결혼기념일"/>
+                                <Text text="2020.01.01"/>
+                                <Label text="취미"/>
+                                <Text text="자전거"/>
+                                <Label text="특기"/>
+                                <Text text="골프"/>
                             </grid:CSSGrid>
                         </VBox>
                     </VBox>
@@ -135,12 +161,63 @@
                             <HBox justifyContent="SpaceBetween">
                                 <Title level="H2" text="발령정보"/>
                             </HBox>
-                            <table:Table id="actionTable" class="data-algin-center" width="100%" visibleRowCount="{/employee/action/rowcount}" rows="{/employee/action/list}" selectionMode="None" columns="{path: '/employee/action/listheader'}">
+                            <table:Table id="actionTable" width="100%" visibleRowCount="{/employee/action/rowcount}" rows="{/employee/action/list}" selectionMode="None">
                                 <table:columns>
-                                    <table:Column width="{width}" filterProperty="{property}" sortProperty="{property}" template="{property}">
-                                        <Label text="{label}"/>
+                                    <table:Column filterProperty="idx" width="auto" sortProperty="idx">
+                                        <Label text="No"/>
+                                        <table:template>
+                                            <Text width="100%" textAlign="Center" text="{idx}" />
+                                        </table:template>
                                     </table:Column>
                                 </table:columns>
+                                <table:Column filterProperty="Todo1" width="auto" sortProperty="Todo1">
+                                    <Label text="발령"/>
+                                    <table:template>
+                                        <Text width="100%" textAlign="Center" text="{Todo1}" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column filterProperty="Todo2" width="auto" sortProperty="Todo2">
+                                    <Label text="발령유형"/>
+                                    <table:template>
+                                        <Text width="100%" textAlign="Center" text="{Todo2}" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column filterProperty="Todo3" width="auto" sortProperty="Todo3">
+                                    <Label text="발령사유"/>
+                                    <table:template>
+                                        <Text width="100%" textAlign="Center" text="{Todo3}" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column filterProperty="Todo4" width="auto" sortProperty="Todo4">
+                                    <Label text="사업장"/>
+                                    <table:template>
+                                        <Text width="100%" textAlign="Center" text="{Todo4}" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column filterProperty="Todo5" width="auto" sortProperty="Todo5">
+                                    <Label text="부서"/>
+                                    <table:template>
+                                        <Text width="100%" textAlign="Center" text="{Todo5}" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column filterProperty="Todo6" width="auto" sortProperty="Todo6">
+                                    <Label text="직급"/>
+                                    <table:template>
+                                        <Text width="100%" textAlign="Center" text="{Todo6}" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column filterProperty="Todo7" width="auto" sortProperty="Todo7">
+                                    <Label text="직책"/>
+                                    <table:template>
+                                        <Text width="100%" textAlign="Center" text="{Todo7}" />
+                                    </table:template>
+                                </table:Column>
+                                <table:Column filterProperty="Todo8" width="auto" sortProperty="Todo8">
+                                    <Label text="사원유형"/>
+                                    <table:template>
+                                        <Text width="100%" textAlign="Center" text="{Todo8}" />
+                                    </table:template>
+                                </table:Column>
                             </table:Table>
                         </VBox>
                     </VBox>
@@ -149,15 +226,48 @@
                             <HBox justifyContent="SpaceBetween">
                                 <Title level="H2" text="주소정보"/>
                                 <HBox>
-                                    <Button type="Transparent" icon="sap-icon://edit" text="수정" press=".openModifyAddressDialog" />
-                                    <Button type="Transparent" icon="sap-icon://add" text="추가" press=".openAddressDialog" />
-                                    <Button type="Transparent" icon="sap-icon://less" text="삭제" press=".onDeleteAddress" />
+                                    <Button type="Transparent" width="117px" icon="sap-icon://edit" text="수정" press=".openModifyAddressDialog" />
+                                    <Button type="Transparent" width="117px" icon="sap-icon://add" text="추가" press=".openAddressDialog" />
+                                    <Button type="Transparent" width="117px" icon="sap-icon://less" text="삭제" press=".onDeleteAddress" />
                                 </HBox>
                             </HBox>
-                            <table:Table id="addressTable" class="data-algin-center" width="100%" visibleRowCount="{/employee/private/rowcount}" rows="{/employee/private/list}" columns="{path: '/employee/private/listheader'}">
+                            <table:Table id="addressTable" width="100%" visibleRowCount="{/employee/private/rowcount}" rows="{/employee/private/list}">
                                 <table:columns>
-                                    <table:Column width="{width}" filterProperty="{property}" sortProperty="{property}" template="{property}">
-                                        <Label text="{label}"/>
+                                    <table:Column filterProperty="Todo1" width="auto" sortProperty="Todo1">
+                                        <Label text="주소유형"/>
+                                        <table:template>
+                                            <Text width="100%" textAlign="Center" text="{Todo1}" />
+                                        </table:template>
+                                    </table:Column>
+                                    <table:Column filterProperty="Todo2" width="auto" sortProperty="Todo2">
+                                        <Label text="국가키"/>
+                                        <table:template>
+                                            <Text width="100%" textAlign="Center" text="{Todo2}" />
+                                        </table:template>
+                                    </table:Column>
+                                    <table:Column filterProperty="Todo3" width="auto" sortProperty="Todo3">
+                                        <Label text="지역"/>
+                                        <table:template>
+                                            <Text width="100%" textAlign="Center" text="{Todo3}" />
+                                        </table:template>
+                                    </table:Column>
+                                    <table:Column filterProperty="Todo4" width="auto" sortProperty="Todo4">
+                                        <Label text="우편번호/시"/>
+                                        <table:template>
+                                            <Text width="100%" textAlign="Center" text="{Todo4}" />
+                                        </table:template>
+                                    </table:Column>
+                                    <table:Column filterProperty="Todo5" width="auto" sortProperty="Todo5">
+                                        <Label text="주소"/>
+                                        <table:template>
+                                            <Text width="100%" textAlign="Center" text="{Todo5}" />
+                                        </table:template>
+                                    </table:Column>
+                                    <table:Column filterProperty="Todo6" width="auto" sortProperty="Todo6">
+                                        <Label text="상세주소"/>
+                                        <table:template>
+                                            <Text width="100%" textAlign="Center" text="{Todo6}" />
+                                        </table:template>
                                     </table:Column>
                                 </table:columns>
                             </table:Table>
@@ -166,8 +276,19 @@
                             <HBox justifyContent="SpaceBetween">
                                 <Title level="H2" text="신상"/>
                             </HBox>
-                            <grid:CSSGrid items="{path: '/employee/base/extinfo2'}" gridTemplateColumns="1fr 3fr 1fr 3fr" gridGap="8px">
-                                <Label text="{data}"/>
+                            <grid:CSSGrid gridTemplateColumns="1fr 3fr 1fr 3fr" gridGap="2px">
+                                <Label text="실제생일"/>
+                                <Text text="1990.01.01"/>
+                                <Label text="음력/양력"/>
+                                <Text text="양력"/>
+                                <Label text="결혼여부"/>
+                                <Text text="기혼"/>
+                                <Label text="결혼기념일"/>
+                                <Text text="2020.01.01"/>
+                                <Label text="취미"/>
+                                <Text text="자전거"/>
+                                <Label text="특기"/>
+                                <Text text="골프"/>
                             </grid:CSSGrid>
                         </VBox>
                     </VBox>

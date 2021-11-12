@@ -138,53 +138,10 @@ sap.ui.define(
 						},
 						base: {
 							isShow: true,
-							extinfo1: [
-								{ data: "성명(영어)" }, //
-								{ data: "GILSOON HONG" },
-								{ data: "성명(한자)" },
-								{ data: "洪吉順" },
-								{ data: "노조가입여부" },
-								{ data: "비조합원" },
-								{ data: "노조직책" },
-								{ data: "" },
-								{ data: "최종학력" },
-								{ data: "대학교 졸업" },
-								{ data: "입사시학력" },
-								{ data: "대학교 졸업" },
-								{ data: "퇴직일" },
-								{ data: "" },
-								{ data: "퇴직사유" },
-								{ data: "" },
-							],
-							extinfo2: [
-								{ data: "실제생일" }, //
-								{ data: "1990.01.01" },
-								{ data: "음력/양력" },
-								{ data: "양력" },
-								{ data: "결혼여부" },
-								{ data: "기혼" },
-								{ data: "결혼기념일" },
-								{ data: "2020.01.01" },
-								{ data: "취미" },
-								{ data: "자전거" },
-								{ data: "특기" },
-								{ data: "골프" },
-							],
 						},
 						action: {
 							isShow: false,
 							rowcount: 3,
-							listheader: [
-								{ width: "4%", label: "No", property: "idx" }, //
-								{ width: "12%", label: "발령", property: "Todo1" },
-								{ width: "12%", label: "발령유형", property: "Todo2" },
-								{ width: "12%", label: "발령사유", property: "Todo3" },
-								{ width: "12%", label: "사업장", property: "Todo4" },
-								{ width: "12%", label: "부서", property: "Todo5" },
-								{ width: "12%", label: "직급", property: "Todo6" },
-								{ width: "12%", label: "직책", property: "Todo7" },
-								{ width: "12%", label: "사원유형", property: "Todo8" },
-							],
 							list: [
 								{ idx: "1", Todo1: "2020.01.01", Todo2: "조직개편", Todo3: "조직명칭변경", Todo4: "서울본사", Todo5: "인사팀", Todo6: "사원", Todo7: "팀원", Todo8: "일반직(연봉)" }, //
 								{ idx: "2", Todo1: "2020.01.01", Todo2: "조직개편", Todo3: "조직명칭변경", Todo4: "서울본사", Todo5: "인사팀", Todo6: "사원", Todo7: "팀원", Todo8: "일반직(연봉)" },
@@ -194,14 +151,9 @@ sap.ui.define(
 						private: {
 							isShow: false,
 							rowcount: 2,
-							listheader: [
-								{ width: "10%", label: "유형", property: "Todo1" }, //
-								{ width: "10%", label: "우편번호", property: "Todo2" },
-								{ width: "80%", label: "주소", property: "Todo3" },
-							],
 							list: [
-								{ Todo1: "본적지", Todo2: "12345", Todo3: "서울시 중구 무교로 15 805호" }, //
-								{ Todo1: "본적지", Todo2: "12345", Todo3: "서울시 중구 무교로 15 805호" },
+								{ Todo1: "영문주소", Todo2: "대한민국", Todo3: "서울특별시", Todo4: "04807", Todo5: "서울시 성동구 자동차시장길23(용답동,예스코)", Todo6: "3333층" }, //
+								{ Todo1: "등록기준지(본적)", Todo2: "대한민국", Todo3: "서울특별시", Todo4: "04807", Todo5: "서울시 성동구 자동차시장길23(용답동,예스코)", Todo6: "4444층" }, //
 							],
 							address: {
 								typelist: [
