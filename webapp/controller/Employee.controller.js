@@ -25,7 +25,7 @@ sap.ui.define(
 				var oModel = new JSONModel({
 					navigation: {
 						isShow: true,
-						width: "20%",
+						width: "22%",
 						search: {
 							results: [
 								{ Ename: "김지현", Manager: true, Todo1: "부장", Todo2: "팀장", Todo3: "예스코 기술연구소 정보기술팀", Todo4: "6년 11개월 (2015.01.01 입사) 재직", Todo5: "인사(5년 6개월)" },
@@ -99,7 +99,7 @@ sap.ui.define(
 						],
 					},
 					employee: {
-						width: "80%",
+						width: "78%",
 						header: {
 							baseinfo: [
 								{ data: "홍길순 부장/팀장" },
@@ -231,10 +231,10 @@ sap.ui.define(
 				this.getView().getModel().setProperty("/navigation/isShow", bState);
 				this.getView()
 					.getModel()
-					.setProperty("/navigation/width", bState ? "20%" : "4%");
+					.setProperty("/navigation/width", bState ? "22%" : "4%");
 				this.getView()
 					.getModel()
-					.setProperty("/employee/width", bState ? "80%" : "96%");
+					.setProperty("/employee/width", bState ? "78%" : "96%");
 			},
 
 			onClickEmployeeCard: function (oEvent) {
