@@ -129,44 +129,46 @@ sap.ui.define(
 								{ data: "2020.01.01(1년 11개월)" },
 							],
 							timeline: [
-								{ label: "회사입사일", data: "2010.01.01" },
-								{ label: "부서배치일", data: "2015.01.01" },
-								{ label: "직급승진일", data: "2016.01.01" },
-								{ label: "직책임용일", data: "2010.01.01" },
-								{ label: "10년장기근속일", data: "2019.12.31" },
+								{ key: "10", label: "회사입사일", data: "2010.01.01" },
+								{ key: "20", label: "부서배치일", data: "2015.01.01" },
+								{ key: "30", label: "직급승진일", data: "2016.01.01" },
+								{ key: "40", label: "직책임용일", data: "2010.01.01" },
+								{ key: "50", label: "10년장기근속일", data: "2019.12.31" },
 							],
 						},
-						base: {
-							isShow: true,
-						},
-						action: {
-							isShow: false,
-							rowcount: 3,
-							list: [
-								{ idx: "1", Todo1: "2020.01.01", Todo2: "조직개편", Todo3: "조직명칭변경", Todo4: "서울본사", Todo5: "인사팀", Todo6: "사원", Todo7: "팀원", Todo8: "일반직(연봉)" }, //
-								{ idx: "2", Todo1: "2020.01.01", Todo2: "조직개편", Todo3: "조직명칭변경", Todo4: "서울본사", Todo5: "인사팀", Todo6: "사원", Todo7: "팀원", Todo8: "일반직(연봉)" },
-								{ idx: "3", Todo1: "2020.01.01", Todo2: "조직개편", Todo3: "조직명칭변경", Todo4: "서울본사", Todo5: "인사팀", Todo6: "사원", Todo7: "팀원", Todo8: "일반직(연봉)" },
-							],
-						},
-						private: {
-							isShow: false,
-							rowcount: 2,
-							list: [
-								{ Todo1: "영문주소", Todo2: "대한민국", Todo3: "서울특별시", Todo4: "04807", Todo5: "서울시 성동구 자동차시장길23(용답동,예스코)", Todo6: "3333층" }, //
-								{ Todo1: "등록기준지(본적)", Todo2: "대한민국", Todo3: "서울특별시", Todo4: "04807", Todo5: "서울시 성동구 자동차시장길23(용답동,예스코)", Todo6: "4444층" }, //
-							],
-							address: {
-								typelist: [
-									{ key: "01", data: "본적지" }, //
-									{ key: "02", data: "주민등록지" },
+						sub: {
+							base: {
+								isShow: true,
+							},
+							action: {
+								isShow: false,
+								rowcount: 3,
+								list: [
+									{ idx: "1", Todo1: "2020.01.01", Todo2: "조직개편", Todo3: "조직명칭변경", Todo4: "서울본사", Todo5: "인사팀", Todo6: "사원", Todo7: "팀원", Todo8: "일반직(연봉)" }, //
+									{ idx: "2", Todo1: "2020.01.01", Todo2: "조직개편", Todo3: "조직명칭변경", Todo4: "서울본사", Todo5: "인사팀", Todo6: "사원", Todo7: "팀원", Todo8: "일반직(연봉)" },
+									{ idx: "3", Todo1: "2020.01.01", Todo2: "조직개편", Todo3: "조직명칭변경", Todo4: "서울본사", Todo5: "인사팀", Todo6: "사원", Todo7: "팀원", Todo8: "일반직(연봉)" },
 								],
-								sidolist: [
-									{ key: "01", data: "서울특별시" }, //
-									{ key: "02", data: "부산광역시" },
-									{ key: "03", data: "경기도" },
-									{ key: "04", data: "강원도" },
+							},
+							private: {
+								isShow: false,
+								rowcount: 2,
+								list: [
+									{ Todo1: "영문주소", Todo2: "대한민국", Todo3: "서울특별시", Todo4: "04807", Todo5: "서울시 성동구 자동차시장길23(용답동,예스코)", Todo6: "3333층" }, //
+									{ Todo1: "등록기준지(본적)", Todo2: "대한민국", Todo3: "서울특별시", Todo4: "04807", Todo5: "서울시 성동구 자동차시장길23(용답동,예스코)", Todo6: "4444층" }, //
 								],
-								form: {},
+								address: {
+									typelist: [
+										{ key: "01", data: "본적지" }, //
+										{ key: "02", data: "주민등록지" },
+									],
+									sidolist: [
+										{ key: "01", data: "서울특별시" }, //
+										{ key: "02", data: "부산광역시" },
+										{ key: "03", data: "경기도" },
+										{ key: "04", data: "강원도" },
+									],
+									form: {},
+								},
 							},
 						},
 					},
@@ -195,24 +197,16 @@ sap.ui.define(
 			},
 
 			onToggleProfile: function (oEvent) {
-				const oClickedButton = oEvent.getSource();
-				const sId = oClickedButton.getId();
-				const bPressed = oClickedButton.getPressed();
 				const oViewModel = this.getView().getModel();
-				const aLayoutId = ["base", "action", "private"];
+				const aSubTabs = oViewModel.getProperty("/employee/sub");
+				const sSelectedKey = oEvent.getParameter("key");
 
-				if (!bPressed) return;
-
-				oClickedButton
-					.getParent()
-					.getItems()
-					.forEach((control) => {
-						control.setPressed(false);
-					});
-				oClickedButton.setPressed(true);
-
-				aLayoutId.forEach((key) => {
-					oViewModel.setProperty(`/employee/${key}/isShow`, sId.includes(key) ? true : false);
+				Object.keys(aSubTabs).forEach((subId) => {
+					if (subId === sSelectedKey) {
+						oViewModel.setProperty(`/employee/sub/${subId}/isShow`, true);
+					} else {
+						oViewModel.setProperty(`/employee/sub/${subId}/isShow`, false);
+					}
 				});
 			},
 
@@ -257,6 +251,6 @@ function fn_SetAddr(Zip, fullAddr) {
 	const oView = sap.ui.getCore().byId("container-pubsample---employee");
 	const oViewModel = oView.getModel();
 
-	oViewModel.setProperty("/employee/private/address/form/zip", Zip);
-	oViewModel.setProperty("/employee/private/address/form/address1", fullAddr);
+	oViewModel.setProperty("/employee/sub/private/address/form/zip", Zip);
+	oViewModel.setProperty("/employee/sub/private/address/form/address1", fullAddr);
 }

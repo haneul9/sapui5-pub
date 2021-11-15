@@ -95,24 +95,34 @@
                         <VBox>
                             <HBox justifyContent="SpaceAround" items="{path: '/employee/header/timeline'}">
                                 <VBox width="20%" alignItems="Center">
-                                    <core:Icon src="sap-icon://circle-task-2" />
+                                    <Text text="{label}" />
                                 </VBox>
                             </HBox>
                             <HBox justifyContent="SpaceAround" items="{path: '/employee/header/timeline'}">
                                 <VBox width="20%" alignItems="Center">
-                                    <core:Icon src="sap-icon://employee" />
-                                    <Text text="{label}" />
+                                    <core:Icon src="sap-icon://employee" class="lineItem" />
+                                </VBox>
+                            </HBox>
+                            <HBox justifyContent="SpaceAround" items="{path: '/employee/header/timeline'}">
+                                <VBox width="20%" alignItems="Center">
                                     <Text text="{data}" />
                                 </VBox>
                             </HBox>
                         </VBox>
                     </VBox>
-                    <HBox class="customBox">
-                        <ToggleButton width='117px' class='toggle_edit' id="baseButton" text="기본" pressed="true" press=".onToggleProfile"/>
-                        <ToggleButton width='117px' class='toggle_edit' id="actionButton" text="발령" press=".onToggleProfile"/>
-                        <ToggleButton width='117px' class='toggle_edit' id="privateButton" text="신상" press=".onToggleProfile"/>
+                    <HBox>
+                        <IconTabBar selectedKey="base" expandable="false" select=".onToggleProfile">
+                            <layoutData>
+                                <FlexItemData growFactor="1"/>
+                            </layoutData>
+                            <items>
+                                <IconTabFilter text="기본" key="base"/>
+                                <IconTabFilter text="발령" key="action"/>
+                                <IconTabFilter text="신상" key="private"/>
+                            </items>
+                        </IconTabBar>
                     </HBox>
-                    <VBox visible="{/employee/base/isShow}">
+                    <VBox visible="{/employee/sub/base/isShow}">
                         <VBox class="customBox">
                             <HBox justifyContent="SpaceBetween">
                                 <Title level="H2" text="추가정보"/>
@@ -156,12 +166,12 @@
                             </grid:CSSGrid>
                         </VBox>
                     </VBox>
-                    <VBox visible="{/employee/action/isShow}">
+                    <VBox visible="{/employee/sub/action/isShow}">
                         <VBox class="customBox">
                             <HBox justifyContent="SpaceBetween">
                                 <Title level="H2" text="발령정보"/>
                             </HBox>
-                            <table:Table id="actionTable" width="100%" visibleRowCount="{/employee/action/rowcount}" rows="{/employee/action/list}" selectionMode="None">
+                            <table:Table id="actionTable" width="100%" visibleRowCount="{/employee/sub/action/rowcount}" rows="{/employee/sub/action/list}" selectionMode="None">
                                 <table:columns>
                                     <table:Column filterProperty="idx" width="auto" sortProperty="idx">
                                         <Label text="No"/>
@@ -221,7 +231,7 @@
                             </table:Table>
                         </VBox>
                     </VBox>
-                    <VBox visible="{/employee/private/isShow}">
+                    <VBox visible="{/employee/sub/private/isShow}">
                         <VBox class="customBox">
                             <HBox justifyContent="SpaceBetween">
                                 <Title level="H2" text="주소정보"/>
@@ -231,7 +241,7 @@
                                     <Button type="Transparent" width="117px" icon="sap-icon://less" text="삭제" press=".onDeleteAddress" />
                                 </HBox>
                             </HBox>
-                            <table:Table id="addressTable" width="100%" visibleRowCount="{/employee/private/rowcount}" rows="{/employee/private/list}">
+                            <table:Table id="addressTable" width="100%" visibleRowCount="{/employee/sub/private/rowcount}" rows="{/employee/sub/private/list}">
                                 <table:columns>
                                     <table:Column filterProperty="Todo1" width="auto" sortProperty="Todo1">
                                         <Label text="주소유형"/>
