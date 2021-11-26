@@ -171,7 +171,7 @@
                             <HBox justifyContent="SpaceBetween">
                                 <Title level="H2" text="발령정보"/>
                             </HBox>
-                            <table:Table id="actionTable" width="100%" visibleRowCount="{/employee/sub/action/rowcount}" rows="{/employee/sub/action/list}" selectionMode="None">
+                            <table:Table id="actionTable" width="100%" columnHeaderHeight="50" rowHeight="50" visibleRowCount="{/employee/sub/action/rowcount}" rows="{/employee/sub/action/list}" selectionMode="None">
                                 <table:columns>
                                     <table:Column filterProperty="idx" width="auto" sortProperty="idx">
                                         <Label text="No"/>
@@ -236,12 +236,12 @@
                             <HBox justifyContent="SpaceBetween">
                                 <Title level="H2" text="주소정보"/>
                                 <HBox>
+                                    <Button type="Transparent" width="117px" icon="sap-icon://add" text="등록" press=".openAddressDialog" />
                                     <Button type="Transparent" width="117px" icon="sap-icon://edit" text="수정" press=".openModifyAddressDialog" />
-                                    <Button type="Transparent" width="117px" icon="sap-icon://add" text="추가" press=".openAddressDialog" />
                                     <Button type="Transparent" width="117px" icon="sap-icon://less" text="삭제" press=".onDeleteAddress" />
                                 </HBox>
                             </HBox>
-                            <table:Table id="addressTable" width="100%" visibleRowCount="{/employee/sub/private/rowcount}" rows="{/employee/sub/private/list}">
+                            <table:Table id="addressTable" width="100%" columnHeaderHeight="50" rowHeight="50" visibleRowCount="{/employee/sub/private/rowcount}" rows="{/employee/sub/private/list}">
                                 <table:columns>
                                     <table:Column filterProperty="Todo1" width="auto" sortProperty="Todo1">
                                         <Label text="주소유형"/>

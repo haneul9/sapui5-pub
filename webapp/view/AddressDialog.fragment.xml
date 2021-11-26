@@ -1,33 +1,36 @@
 <core:FragmentDefinition xmlns="sap.m"
     xmlns:core="sap.ui.core"
     xmlns:grid="sap.ui.layout.cssgrid">
-    <Dialog id="addressDialog" showHeader="false" contentWidth="700px">
+    <Dialog id="addressDialog" showHeader="false" contentWidth="500px">
         <buttons>
-            <Button type="Emphasized" text="저장"/>
+            <Button type="Emphasized" text="등록"/>
             <Button text="닫기" press=".onAddressDialogClose"/>
         </buttons>
         <Panel expanded="true" headerText="주소정보">
             <content>
-                <grid:CSSGrid gridTemplateColumns="1fr 4fr" gridGap="8px">
+                <grid:CSSGrid gridTemplateColumns="3fr 7fr" gridGap="8px">
+                    <grid:layoutData>
+                        <FlexItemData growFactor="1"/>
+                    </grid:layoutData>
                     <Label text="주소유형" />
-                    <ComboBox width="250px" selectedKey="02" items="{ path: '/employee/private/address/typelist' }">
+                    <ComboBox width="100%" selectedKey="02" items="{ path: '/employee/private/address/typelist' }">
                         <core:Item key="{key}" text="{data}" />
                     </ComboBox>
                     <Label text="적용시작일" />
-                    <DatePicker width="250px" class="sapIcon_Date" />
+                    <DatePicker width="100%" class="sapIcon_Date" />
                     <Label text="시/도" />
-                    <ComboBox width="250px" selectedKey="01" items="{ path: '/employee/private/address/sidolist' }">
+                    <ComboBox width="100%" selectedKey="01" items="{ path: '/employee/private/address/sidolist' }">
                         <core:Item key="{key}" text="{data}" />
                     </ComboBox>
                     <Label text="우편번호" />
                     <HBox width="100%">
-                        <Input width="185px" value="{/employee/private/address/form/zip}" editable="false" />
+                        <Input width="80%" value="{/employee/private/address/form/zip}" editable="false" />
                         <Button text="검색" press=".openSearchZipcodePopup"/>
                     </HBox>
                     <Label text="주소" />
-                    <Input width="500px" value="{/employee/private/address/form/address1}" editable="false" />
+                    <Input width="100%" value="{/employee/private/address/form/address1}" editable="false" />
                     <Label text="상세주소" />
-                    <Input width="500px" value="{/employee/private/address/form/address2}" />
+                    <Input width="100%" value="{/employee/private/address/form/address2}" />
                 </grid:CSSGrid>
             </content>
         </Panel>
