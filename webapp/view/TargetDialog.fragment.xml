@@ -8,26 +8,25 @@
 <Button text="Close" press=".onClick" />
 </beginButton>
 <content>
-    <table:Table id= "targetTable" width="100%" visibleRowCount="1" selectionMode="None" columnHeaderVisible= "false"
-            >
-<table:columns>
-<table:Column width="20%">
-        <table:template>
-            <Text text="처" wrapping="false" />
-        </table:template>
-    </table:Column>
-    <table:Column width="30%">
-        <table:template>
-            <Text text="채정안" wrapping="false" />
-        </table:template>
-    </table:Column>
-    <table:Column width="auto">
-        <table:template>
-            <Text text="881929-1*******" wrapping="false" />
-        </table:template>
-    </table:Column>
-</table:columns>
-</table:Table>
+    <table:Table id= "targetTable" rows="{/List}" width="100%" visibleRowCount="5" selectionMode="None" columnHeaderVisible= "false">
+        <table:columns>
+            <table:Column width="20%">
+                <table:template>
+                    <Text text="{Type}" wrapping="false" />
+                </table:template>
+            </table:Column>
+            <table:Column width="30%">
+                <table:template>
+                    <Text text="{Name}" wrapping="false" />
+                </table:template>
+            </table:Column>
+            <table:Column width="auto">
+                <table:template>
+                    <Text text="{Num}" wrapping="false" />
+                </table:template>
+            </table:Column>
+        </table:columns>
+    </table:Table>
 </content>
 </Dialog>
 </core:FragmentDefinition>
