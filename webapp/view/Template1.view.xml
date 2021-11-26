@@ -5,30 +5,32 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:grid="sap.ui.layout.cssgrid">
 	<Page showHeader="false">
-		<VBox>
+		<VBox class="contents-header">
 			<HBox justifyContent="SpaceBetween" class="breadcrumbs">
-				<Breadcrumbs currentLocationText="경조금" separatorStyle="GreaterThan">
-					<Link text="복리후생"/>
-				</Breadcrumbs>
+				<HBox justifyContent="Start" >
+					<Breadcrumbs currentLocationText="경조금" separatorStyle="GreaterThan">
+						<Link text="복리후생"/>
+					</Breadcrumbs>				
+					<ToggleButton type="Transparent" icon="sap-icon://favorite" press="onPress" pressed="true" class="icon-button favorite" />
+				</HBox>
 				<HBox>
 					<Button type="Emphasized" text="신청" class="sapUiTinyMarginEnd" />
-					<Button type="Emphasized" text="저장" class="sapUiTinyMarginEnd" />
-					<Button type="Emphasized" text="삭제" class="sapUiTinyMarginEnd" />
-					<Button type="Emphasized" text="취소" class="sapUiTinyMarginEnd" />
 					<Button icon="sap-icon://print" text="프린트" class="sapUiTinyMarginEnd" />
 					<Button icon="sap-icon://sys-help" text="도움말" />
 				</HBox>
 			</HBox>
+		</VBox>
+		<VBox class="contents">
 			<HBox justifyContent="SpaceAround" class="sapUiMediumMarginBottom">
 				<VBox class="hCardBox sapUiMediumMarginEnd" width="33%">
-					<HBox justifyContent="SpaceBetween">
+					<HBox justifyContent="SpaceBetween" class="title">
 						<HBox justifyContent="Start">
 							<Title level="H2" text="대상자 정보" />
 						</HBox>
-						<Button type="Transparent" icon="sap-icon://employee-approvals" class="icon-button" />
+						<Button type="Transparent" class="icon-button me" />
 					</HBox>
 					<HBox class="my-info">
-						<VBox width="30%" justifyContent="Start" alignItems="Start" class="member-picture">
+						<VBox width="38%" justifyContent="Start" alignItems="Start" class="member-picture">
 							<Image src="/css/images/photo4.jpeg" />
 						</VBox>
 						<VBox class="my-info-detail">
@@ -40,7 +42,9 @@
 					</HBox>
 				</VBox>
 				<VBox class="hCardBox sapUiMediumMarginEnd expenses-info-wrap" width="33%">
-					<Title level="H2" text="나의 경조금은" />
+					<HBox justifyContent="SpaceBetween" class="title">
+						<Title text="나의 경조금은" level="H2" />
+					</HBox>
 					<Text text="입사 이후 지원받은 경조금 내역입니다." class="sapUiSmallMarginBottom" />
 					<HBox>
 						<VBox width="30%" class="expenses-info">
@@ -59,9 +63,9 @@
 					</HBox>
 				</VBox>
 				<VBox class="hCardBox" width="33%">
-					<HBox justifyContent="SpaceBetween">
+					<HBox justifyContent="SpaceBetween" class="title">
 						<Title text="조회조건" level="H2" />
-						<Button type="Transparent" icon="sap-icon://search" class="icon-button" />
+						<Button type="Transparent" class="icon-button search" />
 					</HBox>
 					<grid:CSSGrid gridTemplateColumns="1fr 3fr" gridGap="8px">
 						<Label text="신청일" design="Bold" />

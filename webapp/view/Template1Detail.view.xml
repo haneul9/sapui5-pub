@@ -5,89 +5,110 @@
 	xmlns:table="sap.ui.table"
 	xmlns:grid="sap.ui.layout.cssgrid">
 	<Page showHeader="false">
-		<VBox>
-			<HBox justifyContent="SpaceBetween">
-				<Breadcrumbs currentLocationText="신규신청" separatorStyle="GreaterThan">
-					<Link text="복리후생"/>
-					<Link text="경조금"/>
-				</Breadcrumbs>
-				<HBox>
-					<Button type="Emphasized" text="재작성" />
-					<Button type="Emphasized" text="임시저장" />
-					<Button type="Emphasized" text="신청" />
-					<Button type="Reject" text="삭제" />
-					<Button text="취소"/>
-					<Button type="Transparent" icon="sap-icon://print" text="프린트" />
-					<Button type="Transparent" icon="sap-icon://sys-help" text="도움말" />
+		<VBox class="contents-header">
+			<HBox justifyContent="SpaceBetween" class="breadcrumbs">
+				<HBox justifyContent="Start" >
+					<Breadcrumbs currentLocationText="신규신청" separatorStyle="GreaterThan">
+						<Link text="복리후생"/>
+						<Link text="경조금"/>
+					</Breadcrumbs>				
+					<ToggleButton type="Transparent" icon="sap-icon://favorite" press="onPress" pressed="true" class="icon-button favorite" />
 				</HBox>
-			</HBox>
-			<HBox class="vCardBox">
-				<Image src="https://i1.wp.com/jejuhydrofarms.com/wp-content/uploads/2020/05/blank-profile-picture-973460_1280.png?ssl=1" height="35px" width="35px" />
-				<Text text="홍길동"/>
+				<HBox>
+					<Button type="Emphasized" text="재작성" class="sapUiTinyMarginEnd" />
+					<Button type="Emphasized" text="임시저장" class="sapUiTinyMarginEnd" />
+					<Button type="Emphasized" text="신청" class="sapUiTinyMarginEnd" />
+					<Button type="Reject" text="삭제" class="sapUiTinyMarginEnd" />
+					<Button type="Default" text="취소" class="sapUiTinyMarginEnd cancel" />
+					<Button icon="sap-icon://print" text="프린트" class="sapUiTinyMarginEnd" />
+					<Button icon="sap-icon://sys-help" text="도움말" />
+				</HBox>
+			</HBox>		
+		</VBox>
+		<VBox class="contents">
+			<HBox class="vCardBox my-info-v sapUiMediumMarginBottom">
+				<Image src="/css/images/photo4.jpeg" />
+				<Text text="홍길동" class="name"/>
 				<Text text="부장/팀장"/>
 				<Text text="예스코홀딩스 인사기획팀"/>
 				<Text text="경영관리직/12345"/>
 			</HBox>
-			<HBox class="vCardBox" justifyContent="SpaceBetween">
+			<HBox class="vCardBox info-area sapUiMediumMarginBottom" justifyContent="SpaceBetween">
 				<HBox>
-					<core:Icon src="sap-icon://travel-request"/>
+					<!-- <core:Icon src="sap-icon://travel-request"/> -->
 					<Text text="안내를 위한 공간입니다."/>
 				</HBox>
-				<Button type="Transparent" icon="sap-icon://decline" />
+				<Button type="Transparent" class="icon-button close"/>
 			</HBox>
-			<VBox class="vCardBox">
-				<HBox>
-					<Title 
-					level="H2" 
-					text="신청내역" 
-					/>
-					<Text text="경조사유별 대상자 중복(성명/생년월일 비교)
-						시 신청불가"/>
+			<VBox class="vCardBox sapUiMediumMarginBottom">
+				<HBox alignItems="Center" justifyContent="Start" class="title">
+					<Title level="H2" text="신청내역" />
+					<Text text="경조사유별 대상자 중복(성명/생년월일 비교)시 신청불가" class="desc-txt"/>
 				</HBox>
-				<grid:CSSGrid gridTemplateColumns="1fr 3fr 1fr 3fr" gridGap="8px">
+				<grid:CSSGrid gridTemplateColumns="1fr 3fr 1fr 3fr" gridGap="4px 0" class="form-grid">
 					<Label text="경조유형"/>
-					<Select selectedKey="{/FormData/Concode}" width="250px" valueState="Warning">
-						<core:Item text="{Ztext}" key="{Zcode}" />
-					</Select>
+					<VBox>
+						<Select selectedKey="{/FormData/Concode}" width="250px" valueState="Warning" required="required">
+							<core:Item text="{Ztext}" key="{Zcode}" />
+						</Select>
+					</VBox>
 					<Label text="대상자 생년월일"/>
-					<DatePicker dateValue="{/FormData/Zbirthday}" width="250px" valueState="Warning" class="sapIcon_Date" />
+					<VBox>
+						<DatePicker dateValue="{/FormData/Zbirthday}" width="250px" valueState="Warning" class="sapIcon_Date" />
+					</VBox>
 					<Label text="경조사유"/>
-					<Select selectedKey="{/FormData/Conresn}" width="250px" valueState="Warning">
-						<core:Item text="{Ztext}" key="{Zcode}" />
-					</Select>
+					<VBox>
+						<Select selectedKey="{/FormData/Conresn}" width="250px" valueState="Warning">
+							<core:Item text="{Ztext}" key="{Zcode}" />
+						</Select>
+					</VBox>
 					<Label text="경조일"/>
-					<DatePicker dateValue="{/FormData/Conddate}" width="250px" valueState="Warning" class="sapIcon_Date" />
+					<VBox>
+						<DatePicker dateValue="{/FormData/Conddate}" width="250px" valueState="Warning" class="sapIcon_Date" />
+					</VBox>
 					<Label text="대상자 관계"/>
-					<Select selectedKey="{/FormData/Kdsvh}" width="250px" valueState="Warning">
-						<core:Item text="{Ztext}" key="{Zcode}" />
-					</Select>
+					<VBox>
+						<Select selectedKey="{/FormData/Kdsvh}" width="250px" valueState="Warning">
+							<core:Item text="{Ztext}" key="{Zcode}" />
+						</Select>
+					</VBox>
 					<Label text="행사장소"/>
-					<Input value="워커힐 그랜드 볼룸" class="LongInputBase" valueState="Warning" />
+					<VBox>
+						<Input value="워커힐 그랜드 볼룸" class="LongInputBase" valueState="Warning" />
+					</VBox>
 					<Label text="대상자 성명"/>
 					<HBox>
-						<Input value="{/FormData/Zname}" valueState="Warning" class="SmallInput" />
-						<Button id="RelationBtn" press= '.onDialog' class="InputinnerButton" text="선택"/>
+						<Input value="{/FormData/Zname}" valueState="Warning" width="150px"  class="sapUiTinyMarginEnd" />
+						<Button id="RelationBtn" press= '.onDialog' class="InputinnerButton" icon="sap-icon://accept" text="선택"/>
 					</HBox>
 					<HBox ></HBox>
 					<HBox ></HBox>
 					<Label text="기본급(원)"/>
-					<Text text="4,000,000"/>
+					<VBox>
+						<Text text="4,000,000"/>
+					</VBox>
 					<Label text="지급율"/>
-					<Text text="50%"/>
+					<VBox>
+						<Text text="50%"/>
+					</VBox>
 					<Label text="지급액(원)"/>
-					<Text text="2,000,000"/>
+					<VBox>
+						<Text text="2,000,000"/>
+					</VBox>
 					<Label text="화환여부(Y/N)"/>
-					<Text text="Y"/>
+					<VBox>
+						<Text text="Y"/>
+					</VBox>
 				</grid:CSSGrid>
 			</VBox>
-			<VBox class="vCardBox">
+			<VBox class="vCardBox sapUiMediumMarginBottom">
 				<HBox justifyContent="SpaceBetween">
-					<HBox>
+					<HBox alignItems="Center" justifyContent="Start" class="title">
 						<Title level="H2" text="첨부파일" />
-						<Text text="증빙자료를 꼭 등록 해주세요."/>
+						<Text text="증빙자료를 꼭 등록 해주세요." class="desc-txt" />
 					</HBox>
 					<HBox>
-						<Button icon="sap-icon://add" text="추가" />
+						<Button icon="sap-icon://add" text="추가" class="sapUiTinyMarginEnd" />
 						<Button icon="sap-icon://less" text="삭제" />
 					</HBox>
 				</HBox>
@@ -118,34 +139,50 @@
 					</table:columns>
 				</table:Table>
 			</VBox>
-			<VBox class="vCardBox">
-				<HBox>
+			<VBox class="vCardBox sapUiMediumMarginBottom">
+				<HBox alignItems="Center" justifyContent="Start" class="title">
 					<Title level="H2" text="신청자" />
 				</HBox>
-				<grid:CSSGrid gridTemplateColumns="1fr 3fr 1fr 3fr" gridGap="8px">
+				<grid:CSSGrid gridTemplateColumns="1fr 3fr 1fr 3fr" gridGap="4px 0" class="form-grid">
 					<Label text="성명"/>
-					<Text text="홍길동"/>
+					<VBox>
+						<Text text="홍길동"/>
+					</VBox>
 					<Label text="소속"/>
-					<Text text="본사/인사팀"/>
+					<VBox>
+						<Text text="본사/인사팀"/>
+					</VBox>
 					<Label text="직급/직위"/>
-					<Text text="Senior Manager/부장"/>
+					<VBox>
+						<Text text="Senior Manager/부장"/>
+					</VBox>
 					<Label text="신청일시"/>
-					<Text text="2021.09.13 13:32"/>
+					<VBox>
+						<Text text="2021.09.13 13:32"/>
+					</VBox>
 				</grid:CSSGrid>
 			</VBox>
-			<VBox class="vCardBox">
-				<HBox>
+			<VBox class="vCardBox sapUiMediumMarginBottom">
+				<HBox alignItems="Center" justifyContent="Start" class="title">
 					<Title level="H2" text="결재내역" />
 				</HBox>
-				<grid:CSSGrid gridTemplateColumns="1fr 3fr 1fr 3fr" gridGap="8px">
+				<grid:CSSGrid gridTemplateColumns="1fr 3fr 1fr 3fr" gridGap="4px 0" class="form-grid">
 					<Label text="결재문서번호"/>
-					<Text text="12345678"/>
+					<VBox>
+						<Text text="12345678"/>
+					</VBox>
 					<Label text="결재상태"/>
-					<Text text="신청완료"/>
+					<VBox>
+						<Text text="신청완료"/>
+					</VBox>
 					<Label text="담당자 결재일시"/>
-					<Text text="2021.09.15"/>
+					<VBox>
+						<Text text="2021.09.15"/>
+					</VBox>
 					<Label text="반려사유"/>
-					<Text text="비어있음"/>
+					<VBox>
+						<Text text="비어있음"/>
+					</VBox>
 				</grid:CSSGrid>
 			</VBox>
 		</VBox>
